@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  db: 'mongodb://' + (process.env.DB_PORT_27017_TCP_ADDR || 'localhost') + '/mean-prod',
+  db: 'mongodb://smud:1qaz2wsx@candidate.59.mongolayer.com:10209,candidate.61.mongolayer.com:10082/app45067600',
   /**
    * Database options that will be passed directly to mongoose.connect
    * Below are some examples.
@@ -26,9 +26,9 @@ module.exports = {
     }
     */
   },
-  hostname: 'http://localhost:3000',
+  hostname: 'smud-rebates.herokuapp.com',
   app: {
-    name: 'MEAN - A Modern Stack - Production'
+    name: 'SMUD Rebates'
   },
   logging: {
     format: 'combined'
