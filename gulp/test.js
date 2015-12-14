@@ -30,7 +30,7 @@ gulp.task('runMocha', ['startServer'], function () {
     });
 });
 gulp.task('runKarma', ['runMocha'], function (done) {
-  request('http://localhost:3001/api/aggregatedassets', function(error, response, body) {
+  request('http://localhost:/api/aggregatedassets', function(error, response, body) {
     var aggregatedassets = JSON.parse(body);
     aggregatedassets = processIncludes(aggregatedassets.footer.js);
 

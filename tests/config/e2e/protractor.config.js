@@ -1,7 +1,7 @@
 var jasmineReporters = require('jasmine-reporters');
 
 exports.config = {
-  baseUrl: 'http://localhost:3001',
+  baseUrl: 'http://localhost:',
   framework: 'jasmine2',
   specs: [
     '../../e2e/**/*.spec.js'
