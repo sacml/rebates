@@ -26,6 +26,7 @@
     "bower": "latest",
     "compression": "latest",
     "connect-flash": "latest",
+    "connect-modrewrite": "^0.8.2",
     "consolidate": "latest",
     "cookie-parser": "latest",
     "errorhandler": "latest",
@@ -52,6 +53,7 @@
     "shelljs": "latest",
     "soap": "^0.11.0",
     "swig": "latest",
+    "through": "^2.3.8",
     "view-helpers": "latest"
   },
   "devDependencies": {
