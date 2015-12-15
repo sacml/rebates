@@ -2,8 +2,11 @@
   "name": "mean",
   "description": "MEAN.io: A fullstack JavaScript framework powered by MongoDB, ExpressJS, AngularJS, NodeJS.",
   "version": "0.5.5",
+  "engines": {
+    "node": "4.2.3"
+  },
   "private": false,
-  "author": "Linnovate <mean@linnovate.net>",
+  "author": "Shawn Crossley <shawn.t.crossley@gmail.com>",
   "contributors": "https://github.com/linnovate/mean/graphs/contributors",
   "mean": "0.5.5",
   "repository": {
@@ -20,6 +23,7 @@
     "postinstall": "node tools/scripts/postinstall.js"
   },
   "dependencies": {
+    "abbrev": "^1.0.7",
     "assetmanager": "latest",
     "async": "latest",
     "body-parser": "latest",
@@ -33,6 +37,7 @@
     "express": "latest",
     "forever": "latest",
     "gridfs-stream": "latest",
+    "jshint": "^2.8.0",
     "jsonwebtoken": "latest",
     "lodash": "latest",
     "meanio": "latest",
@@ -47,6 +52,7 @@
     "passport-linkedin": "latest",
     "passport-local": "latest",
     "passport-twitter": "latest",
+    "phantomjs": "^1.9.19",
     "q": "latest",
     "request": "latest",
     "serve-favicon": "latest",
