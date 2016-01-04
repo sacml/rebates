@@ -1,0 +1,170 @@
+<div class="" data-ng-controller="HomeController">
+    <div class="banner">
+        <div class="inner-banner">
+            <h2>Save $75 on your next washing machine</h2>
+            <p>Let's power more savings every day.</p>
+            <a href="/washers">Search Washers</a>
+        </div>
+        <div class="empty"></div>
+    </div>
+    <!-- end banner -->
+    <div class="list-find">
+        <ul>
+            <li>
+                <div class="wrapper-icon">
+                    <img src="/home/assets/img/energy-pro.png" alt="" />
+                </div>
+                <a href="/">Find Energy Efficient Products</a>
+            </li>
+            <li>
+                <div class="wrapper-icon">
+                    <img src="/home/assets/img/energy-reba.png" alt="" />
+                </div>
+                <a href="/">Find Energy Efficient Rebates</a>
+            </li>
+            <li>
+                <div class="wrapper-icon">
+                    <img src="/home/assets/img/energy-loca.png" alt="" />
+                </div>
+                <a href="/">Find Where To Buy Locally</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="list-product">
+    <div class="section-product">
+        <div class="title-section-product">
+            <h2>Featured Washers</h2>
+            <a href="/washers/">View All Washers</a>
+            <div class="clear"></div>
+        </div>
+        <ul data-ng-controller="HomeController" data-ng-init="findWashers()">
+            <li data-ng-repeat="washer in washers">
+                <h3 class="name-cat">{{washer.Brand}}<span>{{washer.Model}}</span></h3>
+                <div class="wrapper-img-thumb">
+                    <img src="{{washer.img}}" alt="" />
+                    <div class="wrapper-hover">
+                        <a href="{{washer.link}}" class="inner-hover">
+                            <img src="/home/assets/img/icon-search.png" alt="" />
+                            <span>View Details</span>
+                        </a>
+                    </div>
+                    <!-- end wrapper-hover -->
+                    <div class="short-view">
+                        <div class="inner-short-view">
+                            $75
+                            <span>Rebate</span>
+                        </div>
+                    </div>
+                    <!-- end short-view -->
+                </div>
+                <h3 class="name-product">Energy Efficiency Rating<span>{{washer.efr}}</span></h3>
+                <a class="view-detail" href="{{washer.link}}">View Details</a>
+            </li>
+        </ul>
+    </div>
+    <!-- end section-product -->
+    <div class="section-product">
+        <div class="title-section-product">
+            <h2>Featured Dryers</h2>
+            <a href="/dryers/">View All Dryers</a>
+            <div class="clear"></div>
+        </div>
+        <ul>
+            <ul data-ng-controller="HomeController" data-ng-init="findDryers()">
+                <li data-ng-repeat="dryer in dryers">
+                    <h3 class="name-cat">{{dryer.Brand}}<span>{{dryer.Model}}</span></h3>
+                    <div class="wrapper-img-thumb">
+                        <img src="{{dryer.img}}" alt="" />
+                        <div class="wrapper-hover">
+                            <a href="{{dryer.link}}" class="inner-hover">
+                                <img src="/home/assets/img/icon-search.png" alt="" />
+                                <span>View Details</span>
+                            </a>
+                        </div>
+                        <!-- end wrapper-hover -->
+                        <div class="short-view">
+                            <div class="inner-short-view">
+                                $75
+                                <span>Rebate</span>
+                            </div>
+                        </div>
+                        <!-- end short-view -->
+                    </div>
+                    <h3 class="name-product">Energy Efficiency Rating<span>{{dryer.efr}}</span></h3>
+                    <a class="view-detail" href="{{dryer.link}}">View Details</a>
+                </li>
+            </ul>
+        </ul>
+    </div>
+    <!-- end section-product -->
+    <div class="section-product">
+        <div class="title-section-product">
+            <h2>Featured Refrigerators</h2>
+            <a href="/refrigerators/">View All Refrigerators</a>
+            <div class="clear"></div>
+        </div>
+        <ul>
+            <ul data-ng-controller="HomeController" data-ng-init="findRefrigerators()">
+                <li data-ng-repeat="refer in refrigerators">
+                    <h3 class="name-cat">{{refer.Brand}}<span>{{refer.Model}}</span></h3>
+                    <div class="wrapper-img-thumb">
+                        <img src="{{refer.img}}" alt="" />
+                        <div class="wrapper-hover">
+                            <a href="{{refer.link}}" class="inner-hover">
+                                <img src="/home/assets/img/icon-search.png" alt="" />
+                                <span>View Details</span>
+                            </a>
+                        </div>
+                        <!-- end wrapper-hover -->
+                        <div class="short-view">
+                            <div class="inner-short-view">
+                                $75
+                                <span>Rebate</span>
+                            </div>
+                        </div>
+                        <!-- end short-view -->
+                    </div>
+                    <h3 class="name-product">Energy Efficiency Rating<span>{{refer.efr}}</span></h3>
+                    <a class="view-detail" href="{{refer.link}}">View Details</a>
+                </li>
+            </ul>
+        </ul>
+    </div>
+    <!-- end section-product -->
+    <div class="section-product">
+        <div class="title-section-product">
+            <h2>Featured Air Conditioners</h2>
+            <a href="index.html">View All Air Conditioners</a>
+            <div class="clear"></div>
+        </div>
+        <ul>
+            <ul data-ng-controller="HomeController" data-ng-init="findAirConditioners()">
+                <li data-ng-repeat="ac in airConditioners">
+                    <h3 class="name-cat">{{ac.Brand}}<span>{{ac.Model}}</span></h3>
+                    <div class="wrapper-img-thumb">
+                        <img src="{{ac.img}}" alt="" />
+                        <div class="wrapper-hover">
+                            <a href="{{ac.link}}" class="inner-hover">
+                                <img src="/home/assets/img/icon-search.png" alt="" />
+                                <span>View Details</span>
+                            </a>
+                        </div>
+                        <!-- end wrapper-hover -->
+                        <div class="short-view">
+                            <div class="inner-short-view">
+                                $75
+                                <span>Rebate</span>
+                            </div>
+                        </div>
+                        <!-- end short-view -->
+                    </div>
+                    <h3 class="name-product">Energy Efficiency Rating<span>{{ac.efr}}</span></h3>
+                    <a class="view-detail" href="{{ac.link}}">View Details</a>
+                </li>
+            </ul>
+        </ul>
+    </div>
+    <!-- end section-product -->
+</div>
+<!-- end list-product -->
