@@ -1,0 +1,89 @@
+<div class="container" data-ng-controller="GreenohmController" data-ng-init="find()" >     
+      <div class="banner banner-page">
+        <div class="inner-banner">
+          <h2>Save $75 on your next washing machine</h2>
+          <p>Let's power more savings every day.</p>
+        </div>
+        <div class="empty"></div>
+      </div><!-- end banner -->
+      <div class="inner-washer-page" >
+      <form method="GET" action="/"  >
+        <div class="title-section-product">
+          <h2>Washers</h2>
+          <div class="clear"></div>
+        </div>
+        <div class="breadcrumb">
+          <a href="/">Home</a> > {{sectionName}}
+        </div><!-- breadcrumb-->
+
+        <div class="left-page" >
+          <h2>Browse By:</h2>
+
+          <h3>Brand:</h3>
+          <p class="brand-pro" data-ng-repeat="brand in brandNames">
+            <input type="checkbox" id="b{{$index}}" name="brandName{{band.id}}" value="brand.seachValue" {{brand.selected}}/>
+            <label for="b{{$index}}">{{brand.label}}</label>
+          </p>
+                    
+
+          <h3>Type:</h3>
+          <p class="brand-pro"  data-ng-repeat="productType in productTypes">
+            <input type="checkbox" id="pt{{$index}}" name="productType" />
+            <label for="pt{{$index}}">{{productType.label}}</label>
+          </p>                
+        </div>
+
+        <div class="right-page">
+          <div class="title-product-washer title-product-washer-top">
+            <div class="washer left"><b>Washers:</b>  </div>
+            <div class="brand left">  Brand</div>
+            <div class="model left">  Model </div>
+            <div class="width left">Width </div>
+            <div class="height left"> Height</div>
+            <div class="capacity left"> Capacity</div>
+            <div class="color left">  Color</div>
+            <div class="price-product left">  Price ($$$)</div>
+            <div class="clear"></div>
+          </div>
+          
+          <ul class="title-product-washer list-product-compare">                      
+            <li data-ng-repeat="product in results.data">   
+                       
+              <div class="brand-product left">  
+                <h2 class="show-respon">{{product.Brand}}</h2>
+                <div class="wrapper-img">
+                  <a href="02-washer-page.html"><img src="/greenohm/assets/img/product-img.jpg" alt=""></a>                 
+                  <p class="brand-pro">
+                    <input type="checkbox" id="pr1" name="product" value="{{product.Brand}}-{{product.Model}}" />
+                    <label for="pr1"><span>Compare</span></label>
+                  </p>
+              </div>
+              <span>Samsung</span>
+              </div>
+              <div class="model left">  <h2 class="show-respon">Model</h2>{{product.Model}}  </div>
+              <div class="width left"><h2 class="show-respon">width</h2>{{product.Width}}  </div>
+              <div class="height left"><h2 class="show-respon">height</h2>{{product.Height}}</div>
+              <div class="capacity left"> <h2 class="show-respon">capacity</h2>{{product.Capacity}}</div>
+              <div class="color left"><h2 class="show-respon">color</h2>{{product.Color}}</div>
+              <div class="price-product left">  <h2 class="show-respon">price</h2>${{product.Price}}</div>
+            </li>            
+          </ul>
+
+          <div class="page-page">
+            <p>Viewing {{results.data.length}} {{sectionName}}</p>
+            <!--ul>
+              <li><a href="02-washer-page2.html">First</a></li>
+              <li><span>1</span></li>
+              <li><a href="02-washer-page2.html">2</a></li>
+              <li><a href="02-washer-page2.html">3</a></li>
+              <li><a href="02-washer-page2.html">4</a></li>
+              <li><a href="02-washer-page2.html">5</a></li>
+              <li><a href="02-washer-page2.html">Last</a></li>
+            </ul-->
+            <div class="clear"></div>
+          </div--><!-- end page-page -->
+        </div>
+        <div class="clear"></div>
+        </form>
+      </div>
+</div>
