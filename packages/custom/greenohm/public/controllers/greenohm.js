@@ -23,19 +23,23 @@ angular.module('mean.greenohm').controller('GreenohmController', ['$scope','$sta
     	switch(path) {
         	case '/washers':
     	    	data = Washers;	        
-                dataFilter = WashersFilter      
+                dataFilter = WashersFilter;      
+                console.log('1');
             break;
             case '/dryers':
     	    	data = Dryers;           
-                dataFilter = DryersFilter
+                dataFilter = DryersFilter;
+                console.log('4');
             break;
             case '/refrigerators':
     	    	data = Refrigerators;    
-                dataFilter = RefrigeratorsFilter       
+                dataFilter = RefrigeratorsFilter;       
+                console.log('3');
             break;
             case '/airconditioners':
     	    	data = Ac;           
                 dataFilter= AcFilter;
+                console.log('2');
             break;
         }
 
@@ -43,7 +47,9 @@ angular.module('mean.greenohm').controller('GreenohmController', ['$scope','$sta
         $scope.brandNames = dataFilter.brands;
         $scope.productTypes = dataFilter.productTypes;  
         $scope.path = path; 
+        
         data.query(function(results) {
+            console.log(results);
             $scope.results= { data: results };
         });
     
@@ -64,6 +70,8 @@ angular.module('mean.greenohm').controller('GreenohmController', ['$scope','$sta
                 data = Ac;                          
             break;
         }            
+
+        
         data.get({brand: $stateParams.brand, model: $stateParams.model},function(results) {
             $scope.brand = $stateParams.brand;
             $scope.model = $stateParams.model;

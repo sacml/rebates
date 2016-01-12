@@ -18,6 +18,7 @@ module.exports = function(Washers) {
         
         var brand = brandModel.split('-')[0];
         var model = brandModel.split('-')[1];        	
+        console.log('brand:',next);
    			var args = {
    						Brand: brand,
    						Model: model,
@@ -43,9 +44,9 @@ module.exports = function(Washers) {
          * List of Washers
          */
         find: function(req, res) {
-  			var args = {};            
+  			var args = {BrandList: 'Whirlpool,Samsung'};            
           soap.createClient(url, function(err, client) {			    			    
-          client.GetClothesWasherSearch(args, function(err, result) {	
+          client.GetClothesWasherSearch(args, function(err, result) {	           
           		var Washers = result.GetClothesWasherSearchResult.ProductList.Product;
           		 res.json(Washers)
       			});

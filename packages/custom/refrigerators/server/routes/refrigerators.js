@@ -5,12 +5,12 @@
 module.exports = function(Refrigerators, app, auth, database) {
 
   var refrigerators = require('../controllers/refrigerators')(Refrigerators);
-  app.route('/api/refrigerators')
+  app.route('/api/refrigerators/-')
     .get(refrigerators.find);
 
- app.route('/api/refrigerators/:brandmodel')
+ app.route('/api/refrigerators/:refrigeratorModel')
     .get(refrigerators.show);
   
    // Finish with setting up the brandmodle param
-  app.param('brandmodel', refrigerators.refrigerator); 
+  app.param('refrigeratorModel', refrigerators.refrigerator); 
 };

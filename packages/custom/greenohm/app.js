@@ -25,12 +25,12 @@ Greenohm.register(function(app, auth, database) {
   });
   
   Greenohm.aggregateAsset('css', 'greenohm.css');
-  Greenohm.aggregateAsset('js', 'js/jquery-1.10.2.js');
-  Greenohm.aggregateAsset('js', 'js/easyLocator.js');
-  Greenohm.aggregateAsset('js', 'js/jquery.zoom.js');
+  Greenohm.aggregateAsset('js', 'jquery-1.10.2.js');
+  Greenohm.aggregateAsset('js', 'easyLocator.js');
+  Greenohm.aggregateAsset('js', 'jquery.zoom.js');
 
-  Greenohm.aggregateAsset('js', 'js/mscrollbar/jquery.mCustomScrollbar.js');
-  Greenohm.aggregateAsset('js', 'js/markerclusterer.min.js');
+  Greenohm.aggregateAsset('js', 'mscrollbar/jquery.mCustomScrollbar.js');
+  Greenohm.aggregateAsset('js', 'markerclusterer.min.js');
   Greenohm.aggregateAsset('js', 'custom.js');
 
   /**

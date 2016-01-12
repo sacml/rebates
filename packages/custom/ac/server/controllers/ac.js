@@ -43,7 +43,7 @@ module.exports = function(Ac) {
          * List of Ac
          */
         find: function(req, res) {
-  			var args = {};            
+  			var args = {BrandList: 'Whirlpool,Samsung'};        
           soap.createClient(url, function(err, client) {			    			    
           client.GetRoomAirConditionerSearch(args, function(err, result) {	
           		var Ac = result.GetRoomAirConditionerSearchResult.ProductList.Product;

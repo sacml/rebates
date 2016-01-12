@@ -2,6 +2,6 @@
 
 angular.module('mean.refrigerators').factory('Refrigerators', ['$resource',
 	function($resource) {
-        return $resource('/api/refrigerators/:brand-:model', { brand:'@brand', model:'@model' }); 
+        return $resource('/api/refrigerators/:brand-:model', { brand:'@brand', model:'@model' }, {'query': { isArray:false   }})
     } 
 ]);

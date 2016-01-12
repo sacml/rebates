@@ -5,12 +5,12 @@
 module.exports = function(Washers, app, auth, database) {
 
  var washers = require('../controllers/washers')(Washers);
-  app.route('/api/washers')
+  app.route('/api/washers/-')
     .get(washers.find);
 
-   app.route('/api/washers/:brandmodel')
+   app.route('/api/washers/:washerModel')
     .get(washers.show);
   
    // Finish with setting up the brandmodle param
-  app.param('brandmodel', washers.washer); 
+  app.param('washerModel', washers.washer); 
 };
