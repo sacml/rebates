@@ -48,11 +48,11 @@
           
           <ul class="title-product-washer list-product-compare">                      
             <li data-ng-repeat="product in results.data">   
-                       
+
               <div class="brand-product left">  
                 <h2 class="show-respon">{{product.Brand}}</h2>
                 <div class="wrapper-img">
-                  <a href="02-washer-page.html"><img src="/greenohm/assets/img/product-img.jpg" alt=""></a>                 
+                  <a href="/washers/{{product.Brand}}-{{product.Model}}"><img src="/greenohm/assets/img/product-img.jpg" alt=""></a>                 
                   <p class="brand-pro">
                     <input type="checkbox" id="pr1" name="product" value="{{product.Brand}}-{{product.Model}}" />
                     <label for="pr1"><span>Compare</span></label>

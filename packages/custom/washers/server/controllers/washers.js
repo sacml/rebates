@@ -14,9 +14,10 @@ module.exports = function(Washers) {
         /**
          * Find washer by brand and Model
          */
-        washer: function(req, res, next, brand,model) {        	
-        	// var brand = brandModel.split('-')[0];
-        	// var model = brandModel.split('-')[1];        	
+        washer: function(req, res, next, brandModel) {
+        
+        var brand = brandModel.split('-')[0];
+        var model = brandModel.split('-')[1];        	
    			var args = {
    						Brand: brand,
    						Model: model,
@@ -26,8 +27,7 @@ module.exports = function(Washers) {
               soap.createClient(url, function(err, client) {			    
 			   
              client.GetClothesWasherDetail(args, function(err, result) {				 
-          		var Washer = result.GetClothesWasherDetailResult;
-          		console.log('washer:washer');
+          		var Washer = result.GetClothesWasherDetailResult;                        	
           		 req.productDetail = Washer;
           		 next();
       			});
@@ -36,8 +36,7 @@ module.exports = function(Washers) {
         /**
          * Show an washer
          */
-        show: function(req, res) {
-        	console.log('washer:show')
+        show: function(req, res) {        	
           res.json(req.productDetail);
         },
         /**

@@ -3,12 +3,12 @@
 
 
 /* jshint -W098 */
-angular.module('mean.greenohm').controller('GreenohmController', ['$scope','Global', 'Greenohm','$location', 
+angular.module('mean.greenohm').controller('GreenohmController', ['$scope','$stateParams','Global', 'Greenohm','$location', 
     'Washers','WashersFilter',
 	'Dryers','DryersFilter',
     'Ac','AcFilter',
     'Refrigerators','RefrigeratorsFilter',
-  function($scope, Global, Greenohm,$location, Washers, WashersFilter,	Dryers, DryersFilter, Ac, AcFilter ,Refrigerators, RefrigeratorsFilter) {
+  function($scope, $stateParams, Global, Greenohm,$location, Washers, WashersFilter,	Dryers, DryersFilter, Ac, AcFilter ,Refrigerators, RefrigeratorsFilter) {
     $scope.global = Global;
     $scope.package = {
       name: 'greenohm'
@@ -44,9 +44,32 @@ angular.module('mean.greenohm').controller('GreenohmController', ['$scope','Glob
         $scope.productTypes = dataFilter.productTypes;  
          
         data.query(function(results) {
-            
             $scope.results= { data: results };
-            console.log($scope.results);
+        });
+    
+    };
+    $scope.findOne = function() {          
+        var path = $location.path().split('/')[1],data;        
+        switch(path) {
+            case 'washers':
+                data = Washers;         
+            break;
+            case 'dryers':
+                data = Dryers;           
+            break;
+            case 'refrigerators':
+                data = Refrigerators;    
+            break;
+            case 'airconditioners':
+                data = Ac;                          
+            break;
+        }            
+        data.get({brand: $stateParams.brand, model: $stateParams.model},function(results) {
+            $scope.brand = $stateParams.brand;
+            $scope.model = $stateParams.model;
+            
+            $scope.product = results;
+
         });
     
     };

@@ -14,6 +14,18 @@ angular.module('mean.greenohm').config(['$stateProvider',
     }).state('airconditioners List page', {
       url: '/airconditioners', 
       templateUrl: 'greenohm/views/list.html'
+    }).state('Washer Detail Page', {
+      url: '/washers/:brand-:model',
+      templateUrl: 'greenohm/views/product.html'
+    }).state('Dryers Detail Page', {
+      url: '/dryers/:brand-:model',
+      templateUrl: 'greenohm/views/product.html'
+    }).state('Refrigerators Detail Page', {
+      url: '/refrigerators/:brand-:model',
+      templateUrl: 'greenohm/views/product.html'
+    }).state('airconditioners Detail Page', {
+      url: '/airconditioners/:brand-:model', 
+      templateUrl: 'greenohm/views/product.html'
     })
     ;
   }
