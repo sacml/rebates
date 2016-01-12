@@ -14,7 +14,9 @@ module.exports = function(Dryers) {
         /**
          * Find washer by brand and Model
          */
-        dryer: function(req, res, next, brand,model) {        	  	
+        dryer: function(req, res, next, brandModel) {        	  	
+        var brand = brandModel.split('-')[0];
+        var model = brandModel.split('-')[1];   
    			var args = {
    						Brand: brand,
    						Model: model,
@@ -42,7 +44,7 @@ module.exports = function(Dryers) {
          * List of Dryers
          */
         find: function(req, res) {
-  			var args = {BrandList: 'Whirlpool,GE,Samsung'};            
+  			var args = {};            
           soap.createClient(url, function(err, client) {			    			    
           client.GetClothesDryerSearch(args, function(err, result) {	
           		var Dryers = result.GetClothesDryerSearchResult.ProductList.Product;

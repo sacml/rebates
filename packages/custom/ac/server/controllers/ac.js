@@ -14,7 +14,9 @@ module.exports = function(Ac) {
         /**
          * Find washer by brand and Model
          */
-        ac: function(req, res, next, brand,model) {        	
+        ac: function(req, res, next, brandModel) {    
+         var brand = brandModel.split('-')[0];
+        var model = brandModel.split('-')[1];       	
         var args = {
    						Brand: brand,
    						Model: model,
@@ -41,7 +43,7 @@ module.exports = function(Ac) {
          * List of Ac
          */
         find: function(req, res) {
-  			var args = {BrandList: 'Whirlpool,GE,Samsung'};            
+  			var args = {};            
           soap.createClient(url, function(err, client) {			    			    
           client.GetRoomAirConditionerSearch(args, function(err, result) {	
           		var Ac = result.GetRoomAirConditionerSearchResult.ProductList.Product;

@@ -42,7 +42,7 @@ angular.module('mean.greenohm').controller('GreenohmController', ['$scope','$sta
         $scope.sectionName = dataFilter.displayName;   
         $scope.brandNames = dataFilter.brands;
         $scope.productTypes = dataFilter.productTypes;  
-         
+        $scope.path = path; 
         data.query(function(results) {
             $scope.results= { data: results };
         });

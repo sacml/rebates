@@ -43,7 +43,7 @@ module.exports = function(Washers) {
          * List of Washers
          */
         find: function(req, res) {
-  			var args = {BrandList: 'Whirlpool,GE,Samsung'};            
+  			var args = {};            
           soap.createClient(url, function(err, client) {			    			    
           client.GetClothesWasherSearch(args, function(err, result) {	
           		var Washers = result.GetClothesWasherSearchResult.ProductList.Product;
