@@ -2,6 +2,7 @@
 
 module.exports = {
   db: 'mongodb://' + (process.env.DB_PORT_27017_TCP_ADDR || 'localhost') + '/mean-dev',
+  //db: 'mongodb://heroku:bnySihqJyNGbaHXuQEnCzqvn6uHNYo0U42vZz9zFeODOaLFSzFq5loA1CXeifCh-Rb-bTvVIRav0ic09kXuwaA@candidate.59.mongolayer.com:10209,candidate.61.mongolayer.com:10082/app45067600',
   debug: true,
   logging: {
     format: 'tiny'
