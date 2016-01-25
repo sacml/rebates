@@ -1,0 +1,36 @@
+<div class="" data-ng-controller="ProductsController" ng-init="init()">
+<form id="product-search-form" class="row form-horizontal col-sm-6 well" name="productSearchForm">
+      <div ng-repeat="error in searchError" class="col-sm-12">
+        <div class="alert alert-danger animated fadeIn">{{error.msg}}</div>
+      </div>
+        
+            <div class="form-group row">
+                <label for="product-search-category" class="col-sm-2 control-label">Category</label>
+                <div class="col-sm-10">
+                    <select class="form-control" required data-ng-model="search['category']"  id="product-search-category" >
+                        <option value="">-- Choose Category --</option>
+                        <option value="washers">Washers</option>
+                        <option value="dryers">Dryers</option>
+                        <option value="refrigerators">Refrigerators</option>
+                        <option value="airconditioners">Air Conditioners</option>
+                    </select>
+                </div>
+            </div>
+        
+        <div class="col-sm-offset-2 col-sm-4">
+            <button  class="btn" ng-click="find(productSearchForm.$valid)">Search</button>        
+        </div>
+</form>
+
+<section class="row col-xs-12">
+  <h1 >{{products.length}} products found.</h1>
+
+  <ul class="products unstyled">
+    <li data-ng-repeat="product in products">
+    {{product.category}}  <a data-ng-href="/admin/products/{{product._id}}">{{product.brand}} {{product.model}}</a>        
+    </li>
+  </ul>
+  <h1 data-ng-hide="!products || products.length">No products yet. <br> Why don't you <a href="/products/create">Create One</a>?</h1>
+</section>
+</div>
+

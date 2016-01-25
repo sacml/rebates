@@ -1,0 +1,58 @@
+<section data-ng-controller="ProductsController" data-ng-init="findOne()">
+  <form name="productForm" class="form-horizontal col-md-6" role="form" data-ng-submit="update(productForm.$valid)" novalidate>
+    <div class="form-group" ng-class="{ 'has-error' : submitted && productForm.brand.$invalid }">
+      <label mean-token="'edit-brand'" for="brand" class="col-md-2 control-label">Brand</label>
+      <div class="col-md-10">
+        <input name="brand" type="text" class="form-control" data-ng-model="product.brand" id="brand" placeholder="Brand" required>
+        <div ng-show="submitted && productForm.brand.$invalid" class="help-block">
+          <p ng-show="productForm.brand.$error.required">Brand is required</p>
+        </div>
+      </div>
+    </div>
+
+	<div class="form-group" ng-class="{ 'has-error' : submitted && productForm.model.$invalid }">
+      <label mean-token="'edit-model'" for="model" class="col-md-2 control-label">Model</label>
+      <div class="col-md-10">
+        <input name="model" type="text" class="form-control" data-ng-model="product.model" id="model" placeholder="Model" required>
+        <div ng-show="submitted && productForm.model.$invalid" class="help-block">
+          <p ng-show="productForm.model.$error.required">Model is required</p>
+        </div>
+      </div>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : submitted && productForm.image.$invalid }">
+      <label mean-token="'edit-image'" for="image" class="col-md-2 control-label">Image</label>
+      <div class="col-md-10">
+        <input name="image" type="text" class="form-control" data-ng-model="product.image" id="image" placeholder="Image" required>
+        <div ng-show="submitted && productForm.image.$invalid" class="help-block">
+          <p ng-show="productForm.image.$error.required">Image is required</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error' : submitted && productForm.description.$invalid }">
+      <label mean-token="'edit-description'" for="description" class="col-md-2 control-label">Description</label>
+      <div class="col-md-10">
+        <textarea name="description" data-ng-model="product.description" id="description" cols="30" rows="10" placeholder="Description" class="form-control" required></textarea>
+        <div ng-show="submitted && productForm.description.$invalid" class="help-block">
+          <p ng-show="productForm.description.$error.required">Description is required</p>
+        </div>
+      </div>
+    </div>
+
+	<div class="form-group" ng-class="{ 'has-error' : submitted && productForm.featureDescription.$invalid }">
+      <label mean-token="'edit-featureDescription'" for="featureDescription" class="col-md-2 control-label">Feature Description</label>
+      <div class="col-md-10">
+        <textarea name="featureDescription" data-ng-model="product.featureDescription" id="featureDescription" cols="30" rows="10" placeholder="Description" class="form-control" required></textarea>
+        <div ng-show="submitted && productForm.featureDescription.$invalid" class="help-block">
+          <p ng-show="productForm.featureDescription.$error.required">Description is required</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-offset-2 col-md-10">
+        <button mean-token="'edit-submit'" type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </div>
+  </form>
+</section>

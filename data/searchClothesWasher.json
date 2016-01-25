@@ -1,0 +1,103 @@
+{
+    "SearchCriteriaDetail": [{
+        "Feature": "Brand",
+        "Label": "Amana",
+        "Value": "1.00",
+        "SortOrder": 1
+    }, {
+        "Feature": "Brand",
+        "Label": "GE",
+        "Value": "7.00",
+        "SortOrder": 1
+    }, {
+        "Feature": "Brand",
+        "Label": "LG",
+        "Value": "10.00",
+        "SortOrder": 1
+    }, {
+        "Feature": "Brand",
+        "Label": "Maytag",
+        "Value": "3.00",
+        "SortOrder": 1
+    }, {
+        "Feature": "Brand",
+        "Label": "Samsung",
+        "Value": "5.00",
+        "SortOrder": 1
+    }, {
+        "Feature": "Brand",
+        "Label": "Whirlpool",
+        "Value": "5.00",
+        "SortOrder": 1
+    }, {
+        "Feature": "Capacity (cu. ft.)",
+        "Label": "Max",
+        "Value": "5.70",
+        "SortOrder": 10
+    }, {
+        "Feature": "Capacity (cu. ft.)",
+        "Label": "Min",
+        "Value": "4.16",
+        "SortOrder": 10
+    }, {
+        "Feature": "Depth",
+        "Label": "Max",
+        "Value": "34.40",
+        "SortOrder": 18
+    }, {
+        "Feature": "Depth",
+        "Label": "Min",
+        "Value": "28.38",
+        "SortOrder": 18
+    }, {
+        "Feature": "Height",
+        "Label": "Max",
+        "Value": "47.00",
+        "SortOrder": 32
+    }, {
+        "Feature": "Height",
+        "Label": "Min",
+        "Value": "38.69",
+        "SortOrder": 32
+    }, {
+        "Feature": "Load Configuration",
+        "Label": "Front Loader",
+        "Value": "26.00",
+        "SortOrder": 38
+    }, {
+        "Feature": "Load Configuration",
+        "Label": "Top Loader",
+        "Value": "5.00",
+        "SortOrder": 38
+    }, {
+        "Feature": "Water Usage (gallons/year)",
+        "Label": "Max",
+        "Value": "5885.00",
+        "SortOrder": 63
+    }, {
+        "Feature": "Water Usage (gallons/year)",
+        "Label": "Min",
+        "Value": "3662.00",
+        "SortOrder": 63
+    }, {
+        "Feature": "Width",
+        "Label": "Max",
+        "Value": "30.00",
+        "SortOrder": 65
+    }, {
+        "Feature": "Width",
+        "Label": "Min",
+        "Value": "27.00",
+        "SortOrder": 65
+    }, {
+        "Feature": "Price",
+        "Label": "Min",
+        "Value": "599.99",
+        "SortOrder": 100
+    }, {
+        "Feature": "Price",
+        "Label": "Max",
+        "Value": "1529.99",
+        "SortOrder": 100
+    }]
+}

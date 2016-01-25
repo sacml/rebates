@@ -60,6 +60,7 @@
     "soap": "^0.11.0",
     "swig": "latest",
     "through": "^2.3.8",
+    "underscore": "^1.8.3",
     "view-helpers": "latest"
   },
   "devDependencies": {

@@ -1,0 +1,88 @@
+{
+    "SearchCriteriaDetail": [{
+        "Feature": "Brand",
+        "Label": "Blomberg",
+        "Value": "1.00",
+        "SortOrder": 1
+    }, {
+        "Feature": "Brand",
+        "Label": "Kenmore",
+        "Value": "1.00",
+        "SortOrder": 1
+    }, {
+        "Feature": "Brand",
+        "Label": "LG",
+        "Value": "1.00",
+        "SortOrder": 1
+    }, {
+        "Feature": "Brand",
+        "Label": "Whirlpool",
+        "Value": "1.00",
+        "SortOrder": 1
+    }, {
+        "Feature": "Capacity (cu. ft.)",
+        "Label": "Max",
+        "Value": "7.30",
+        "SortOrder": 6
+    }, {
+        "Feature": "Capacity (cu. ft.)",
+        "Label": "Min",
+        "Value": "4.10",
+        "SortOrder": 6
+    }, {
+        "Feature": "Depth",
+        "Label": "Max",
+        "Value": "31.00",
+        "SortOrder": 12
+    }, {
+        "Feature": "Depth",
+        "Label": "Min",
+        "Value": "24.75",
+        "SortOrder": 12
+    }, {
+        "Feature": "Drum Finish",
+        "Label": "Aquawave Stainless Steel",
+        "Value": "1.00",
+        "SortOrder": 18
+    }, {
+        "Feature": "Drum Finish",
+        "Label": "Stainless Steel",
+        "Value": "3.00",
+        "SortOrder": 18
+    }, {
+        "Feature": "Type",
+        "Label": "Front Loader",
+        "Value": "4.00",
+        "SortOrder": 38
+    }, {
+        "Feature": "Moisture Sensor",
+        "Label": "No",
+        "Value": "1.00",
+        "SortOrder": 46
+    }, {
+        "Feature": "Moisture Sensor",
+        "Label": "Yes",
+        "Value": "3.00",
+        "SortOrder": 46
+    }, {
+        "Feature": "Size",
+        "Label": "Compact",
+        "Value": "1.00",
+        "SortOrder": 47
+    }, {
+        "Feature": "Size",
+        "Label": "Standard",
+        "Value": "3.00",
+        "SortOrder": 47
+    }, {
+        "Feature": "Price",
+        "Label": "Min",
+        "Value": "1149.99",
+        "SortOrder": 100
+    }, {
+        "Feature": "Price",
+        "Label": "Max",
+        "Value": "1599.0",
+        "SortOrder": 100
+    }]
+}
