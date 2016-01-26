@@ -1,16 +1,8 @@
 'use strict';
 var dryersBrands =
-[{ 
-   label: 'All',
-    searchValue: 'Amana,GE,Kenmore,LG,Maytag,Whirlpool',
-    selected: 'checked'
-}, {
-    label: 'Amana',
-    searchValue: 'Amana',
-    selected: 'checked'
-}, {
-    label: 'GE',
-    searchValue: 'GE',
+[ {
+    label: 'Blomberg',
+    searchValue: 'Blomberg',
     selected: 'checked'
 }, {
     label: 'Kenmore',
@@ -21,10 +13,6 @@ var dryersBrands =
     searchValue: 'LG',
     selected: 'checked'
 }, {
-    label: 'Maytag',
-    searchValue: 'Maytag',
-    selected: 'checked'
-}, {
     label: 'Whirlpool',
     searchValue: 'whirlpool',
     selected: 'checked'
@@ -32,13 +20,8 @@ var dryersBrands =
 
 var dryersTypes = [
 {
-    label: 'Top Load',
-    searchValue: 'Top Load',
-    selected: 'checked'
-},
-{
-    label: 'Front Load',
-    searchValue: 'Front Load',
+    label: 'Front Loader',
+    searchValue: 'Front Loader',
     selected: 'checked'
 }
 ];

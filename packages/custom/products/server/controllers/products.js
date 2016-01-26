@@ -108,7 +108,7 @@ module.exports = function(Products) {
                 var query = Product.find({});
             }
 
-            query.select('_id category brand model');           
+            query.select('_id category brand model width height price colors image capacity');           
             query.sort('-created').exec(function(err, products) {
                 if (err) {
                     return res.status(500).json({

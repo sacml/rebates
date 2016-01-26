@@ -32,7 +32,7 @@
     <div class="form-group" ng-class="{ 'has-error' : submitted && productForm.description.$invalid }">
       <label mean-token="'edit-description'" for="description" class="col-md-2 control-label">Description</label>
       <div class="col-md-10">
-        <textarea name="description" data-ng-model="product.description" id="description" cols="30" rows="10" placeholder="Description" class="form-control" required></textarea>
+        <textarea name="description" data-ng-model="product.description" id="description" cols="30" rows="10" placeholder="Description" class="form-control" ></textarea>
         <div ng-show="submitted && productForm.description.$invalid" class="help-block">
           <p ng-show="productForm.description.$error.required">Description is required</p>
         </div>
@@ -42,7 +42,7 @@
 	<div class="form-group" ng-class="{ 'has-error' : submitted && productForm.featureDescription.$invalid }">
       <label mean-token="'edit-featureDescription'" for="featureDescription" class="col-md-2 control-label">Feature Description</label>
       <div class="col-md-10">
-        <textarea name="featureDescription" data-ng-model="product.featureDescription" id="featureDescription" cols="30" rows="10" placeholder="Description" class="form-control" required></textarea>
+        <textarea name="featureDescription" data-ng-model="product.featureDescription" id="featureDescription" cols="30" rows="10" placeholder="Description" class="form-control"></textarea>
         <div ng-show="submitted && productForm.featureDescription.$invalid" class="help-block">
           <p ng-show="productForm.featureDescription.$error.required">Description is required</p>
         </div>

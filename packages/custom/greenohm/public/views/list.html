@@ -50,22 +50,22 @@
             <li data-ng-repeat="product in results.data">   
 
               <div class="brand-product left">  
-                <h2 class="show-respon">{{product.Brand}}</h2>
+                <h2 class="show-respon">{{product.brand}}</h2>
                 <div class="wrapper-img">
-                  <a href="{{path}}/{{product.Brand}}-{{product.Model}}"><img src="/greenohm/assets/img/product-img.jpg" alt=""></a>                 
+                  <a href="/product/{{product._id}}"><img src="{{product.image}}" alt="{{product.brand}}-{{product.model}}"></a>                 
                   <p class="brand-pro">
-                    <input type="checkbox" id="pr1" name="product" value="{{product.Brand}}-{{product.Model}}" />
+                    <input type="checkbox" id="pr1" name="product" value="{{product.brand}}-{{product.model}}" />
                     <label for="pr1"><span>Compare</span></label>
                   </p>
               </div>
-              <span>Samsung</span>
+              <span>{{product.brand}}</span>
               </div>
-              <div class="model left">  <h2 class="show-respon">Model</h2>{{product.Model}}  </div>
-              <div class="width left"><h2 class="show-respon">width</h2>{{product.Width}}  </div>
-              <div class="height left"><h2 class="show-respon">height</h2>{{product.Height}}</div>
-              <div class="capacity left"> <h2 class="show-respon">capacity</h2>{{product.Capacity}}</div>
-              <div class="color left"><h2 class="show-respon">color</h2>{{product.Color}}</div>
-              <div class="price-product left">  <h2 class="show-respon">price</h2>${{product.Price}}</div>
+              <div class="model left">  <h2 class="show-respon">Model</h2>{{product.model}}  </div>
+              <div class="width left"><h2 class="show-respon">width</h2>{{product.width}}  </div>
+              <div class="height left"><h2 class="show-respon">height</h2>{{product.height}}</div>
+              <div class="capacity left"> <h2 class="show-respon">capacity</h2>{{product.capacity}}</div>
+              <div class="color left"><h2 class="show-respon">color</h2>{{product.color}}</div>
+              <div class="price-product left">  <h2 class="show-respon">price</h2>${{product.price}}</div>
             </li>            
           </ul>
 

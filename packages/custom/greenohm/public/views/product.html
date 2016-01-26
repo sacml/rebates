@@ -1,37 +1,28 @@
-<div class="container" data-ng-controller="GreenohmController" data-ng-init="findOne()">
+<div class="container" data-ng-controller="GreenohmController" data-ng-init="loadProduct()">
 			<div class="title-section-product">
-				<h2>Featured Washers</h2>
-				<a href="/{{$section}}">View All Washers</a>
+				<h2>Featured  {{product.category}}</h2>
+				<a href="/{{product.category}}">View All Washers</a>
 				<div class="clear"></div>
 			</div>
 			<div class="breadcrumb">
-				<a href="index.html">Home</a> > <a href="02-washer-page2.html">Washers</a> > {{brand}} Washer: {{model}}
+				<a href="index.html">Home</a> > <a href="/{{product.category}}"> {{product.category}}</a> > {{product.brand}} Washer: {{product.model}}
 			</div><!-- breadcrumb-->
 			<div class="content-left">
 				<div class="list-img">
 					<div class="img-larger">
-						<span class='zoom' id='ex1'><img src="/greenohm/assets/img/product-img.jpg" alt="" class="zoom-normal" /></span>
-					</div>
-					<!--p>Hover Over Image to Zoom</p>
-					<ul class="img-small">
-						<li><img src="/greenohm/assets/img/product-img.jpg" alt="" /></li>
-						<li><img src="/greenohm/assets/img/product-img.jpg" alt="" /></li>
-						<li><img src="/greenohm/assets/img/product-img.jpg" alt="" /></li>
-						<li><img src="/greenohm/assets/img/product-img.jpg" alt="" /></li>
-					</ul-->
-				
-				
+						<span class='zoom' id='ex1'><img src="{{product.image}}" alt="" class="zoom-normal" /></span>
+					</div>									
 				</div><!-- end list-img -->
 				<div class="energy-start">
 					<img src="/greenohm/assets/img/energy-start.jpg" alt="" />
 					<div class="inner-energy">
 						<h2>
 							Dollar Savings
-							<span>${{product.CostSavings}}</span>
+							<span>${{product.costSavings}}</span>
 						</h2>
 						<h2>
 							Energy Savings
-							<span>{{product.EnergySavings}}<sub>Kwh </sub></span>
+							<span>{{product.energySavings}}<sub>Kwh </sub></span>
 						</h2>
 						<p style="color: #999999">Your estimated lifetime
 							electrical energy savings
@@ -44,9 +35,9 @@
 			</div>
 			<div class="content-right">
 				<div class="info-title-pro">
-					<h2 class="title-product"> {{brand}} Washer </h2>
-					<p class="model">Model {{model}}</p>
-					<p class="price">${{product.msrp}}<sub>MSRP </sub></p>
+					<h2 class="title-product"> {{product.brand}} {{product.category}} </h2>
+					<p class="model">Model {{product.model}}</p>
+					<p class="price">${{product.price}}<sub>MSRP </sub></p>
 				</div>
 				<div class="link-product">
 					<a href="#" class="find-locally">Find Locally</a>
@@ -64,11 +55,10 @@
 						</ul>
 					</div><!-- title-tab -->
 					<div class="content-tab">
-						<div class="content-tab-item features active">
-							<h3>Activewash Technology</h3>
-							<p>Features a built in sink and water jet for easy stain removal and prewashing</p>																						
+						<div class="content-tab-item features " style="display:none" >
+																						
 						</div><!-- end contant-tab-item -->
-						<div class="content-tab-item ">
+						<div class="content-tab-item specs active" style="display:none" >
 							<ul class="specifications">
 								<li>
 									<div class="specs left">
@@ -77,7 +67,7 @@
 									<div class="details left">Details:</div>
 									<div class="clear"></div>
 								</li>
-								<li data-ng-repeat="spec in product.FeatureList.ProductFeature">
+								<li data-ng-repeat="spec in product.features">
 									<div class="specs left">
 										{{spec.Feature}}
 									</div>
@@ -88,50 +78,13 @@
 								</li>								
 							</ul>
 						</div><!-- end contant-tab-item -->
-						<div class="content-tab-item">
+						<div class="content-tab-item" style="display:none" >>
 						3
 						</div><!-- end contant-tab-item -->
-						<div class="content-tab-item ">
-							<form method="/" action="index.html" class="your-claim" >
-								<h2>Claim Your $75 Rebate from SMUD</h2>
-								<p class="note-form">Fill out the form below to claim your SMUD rebate for this product.</p>
-								<p class="form-w50"><input type="text" name="first-name" value="" placeholder="First Name" /></p>
-								<p class="form-w50 last"><input type="text" name="last-name" value="" placeholder="Last Name" /></p>
-								<div class="clear"></div>
-								<p class="form-w50"><input type="emial" name="email-address" value="" placeholder="Email Address" /></p>
-								<p class="form-w50 last"><input type="text" name="phone-number" value="" placeholder="Phone Number" /></p>
-								<div class="clear"></div>
-								<p class="form-w100"><textarea name="address" value="" placeholder="Address"></textarea></p>
-								<p class="form-w100">
-									<input class="city" name="city" placeholder="City" />
-									<input class="ca" name="ca" placeholder="Ca" />
-									<input class="zip-code" name="zip-code" placeholder="Zip code" />
-								</p>
-								<div class="clear"></div>
-								<p class="form-w100"><input type="text" name="acount-number" value="" placeholder="SMUD Account Number" /></p>
-								<p class="form-w100">
-									<span class="form-w50">
-										<label class="name-of-retailer">
-											<select>
-												<option selected> Name of Retailer </option>
-												<option>Name of Retailer</option>
-												<option>Name of Retailer</option>
-											</select>
-										</label>
-									</span>
-									<span class="form-w50 last">
-										<label for="file-upload" class="custom-file-upload"><input id="file-upload" type="file" name="datafile"  value="Choose File" class="datafile" /></label>
-										<input type="text" name="textline"  placeholder="Receipt Image" class="path-file"/>
-										
-										
-									</span>
-								</p>
-								<p class="form-w100"><input type="submit" value="Claim Rebate" /></p>
-								
-								
-							</form>
+						<div class="content-tab-item " style="display:none" >>
+							
 						</div><!-- end contant-tab-item -->
-						<div class="content-tab-item ">
+						<div class="content-tab-item " style="display:none" >>
 							<p>This product is available at the following find local retailers. Please call to confirm availability,</p>
 							<div class="list-map">
 								<div id="locatorList" style="height:400px"></div>
@@ -140,7 +93,7 @@
 							   </script>
 							</div>
 							<ul class="list-location">
-								<li  data-ng-repeat="onlineRetailer in product.WhereToBuyOnlineList.OnlineRetailer">
+								<li  data-ng-repeat="onlineRetailer in product.onlineRetailers">
 									<div class="logo-location left">
 									</div>
 									<div class="address-location left">										
@@ -159,7 +112,7 @@
 								</li>								
 							</ul>
 							<ul class="list-location">
-								<li  data-ng-repeat="retailer in product.WhereToBuyOfflineList.OfflineRetailer">
+								<li  data-ng-repeat="retailer in product.offlineRetailers">
 									<div class="logo-location left">
 										<img src="/greenohm/assets/img/logo1.png" alt="" />
 									</div>
@@ -180,14 +133,7 @@
 									</div>
 								</li>								
 							</ul>
-							<div class="page-page">
-						<!--ul>
-							<li><a href="02-washer-page.html">First</a></li>
-							<li><span>1</span></li>
-							<li><a href="02-washer-page.html">2</a></li>
-							
-							<li><a href="02-washer-page.html">Last</a></li>
-						</ul-->
+							<div class="page-page">					
 						<div class="clear"></div>
 					</div><!-- end page-page -->
 							</div>

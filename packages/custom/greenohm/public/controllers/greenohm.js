@@ -4,11 +4,11 @@
 
 /* jshint -W098 */
 angular.module('mean.greenohm').controller('GreenohmController', ['$scope','$stateParams','Global', 'Greenohm','$location', 
-    'Washers','WashersFilter',
-	'Dryers','DryersFilter',
-    'Ac','AcFilter',
-    'Refrigerators','RefrigeratorsFilter',
-  function($scope, $stateParams, Global, Greenohm,$location, Washers, WashersFilter,	Dryers, DryersFilter, Ac, AcFilter ,Refrigerators, RefrigeratorsFilter) {
+    'Products','WashersFilter',
+	'DryersFilter',
+    'AcFilter',
+    'RefrigeratorsFilter',
+  function($scope, $stateParams, Global, Greenohm,$location, Products, WashersFilter,DryersFilter,  AcFilter , RefrigeratorsFilter) {
     $scope.global = Global;
     $scope.package = {
       name: 'greenohm'
@@ -19,25 +19,25 @@ angular.module('mean.greenohm').controller('GreenohmController', ['$scope','$sta
 
     $scope.find = function() {      	
     	var path = $location.path();
-        var data,dataFilter;
+        var category,dataFilter;
     	switch(path) {
         	case '/washers':
-    	    	data = Washers;	        
+    	    	category = 'washers';	        
                 dataFilter = WashersFilter;      
                 console.log('1');
             break;
             case '/dryers':
-    	    	data = Dryers;           
+    	    	category = 'dryers';           
                 dataFilter = DryersFilter;
                 console.log('4');
             break;
             case '/refrigerators':
-    	    	data = Refrigerators;    
+    	    	category = 'refrigerators';    
                 dataFilter = RefrigeratorsFilter;       
                 console.log('3');
             break;
             case '/airconditioners':
-    	    	data = Ac;           
+    	    	category = 'airconditioners';           
                 dataFilter= AcFilter;
                 console.log('2');
             break;
@@ -48,31 +48,20 @@ angular.module('mean.greenohm').controller('GreenohmController', ['$scope','$sta
         $scope.productTypes = dataFilter.productTypes;  
         $scope.path = path; 
         
-        data.query(function(results) {
+        Products.query({category:category},function(results) {
             console.log(results);
             $scope.results= { data: results };
         });
     
     };
-    $scope.findOne = function() {          
-        var path = $location.path().split('/')[1],data;        
-        switch(path) {
-            case 'washers':
-                data = Washers;         
-            break;
-            case 'dryers':
-                data = Dryers;           
-            break;
-            case 'refrigerators':
-                data = Refrigerators;    
-            break;
-            case 'airconditioners':
-                data = Ac;                          
-            break;
-        }            
-
+    $scope.loadProduct = function() {          
         
-        data.get({brand: $stateParams.brand, model: $stateParams.model},function(results) {
+        console.log("hi");
+        
+        
+        Products.get({
+        productId: $stateParams.productId
+      },function(results) {
             $scope.brand = $stateParams.brand;
             $scope.model = $stateParams.model;
             
