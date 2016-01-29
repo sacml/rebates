@@ -56,7 +56,7 @@ var RefrieratorTypes = [
     label: 'Column Refrigerator',
     searchValue: 'Column Refrigerator',
     selected: 'checked'
-}{
+},{
     label: 'Side-by-Side',
     searchValue: 'Side-by-Side',
     selected: 'checked'
