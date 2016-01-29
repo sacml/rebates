@@ -1,44 +1,64 @@
 'use strict';
 var RefrieratorBrands =
-[{ 
-   label: 'All',
-    searchValue: 'Amana,GE,Kenmore,LG,Maytag,Whirlpool',
+[ {
+    label: 'Bosch',
+    searchValue: 'Bosch',
     selected: 'checked'
 }, {
-    label: 'Amana',
-    searchValue: 'Amana',
+    label: 'Fisher & Paykel',
+    searchValue: 'Fisher & Paykel',
     selected: 'checked'
 }, {
-    label: 'GE',
-    searchValue: 'GE',
+    label: 'Gaggenau',
+    searchValue: 'Gaggenau',
+    selected: 'checked'
+}, {
+    label: 'GE Profile',
+    searchValue: 'GE Profile',
     selected: 'checked'
 }, {
     label: 'Kenmore',
     searchValue: 'Kenmore',
     selected: 'checked'
 }, {
+    label: 'KitchenAid',
+    searchValue: 'KitchenAid',
+    selected: 'checked'
+}, {
     label: 'LG',
     searchValue: 'LG',
     selected: 'checked'
 }, {
-    label: 'Maytag',
-    searchValue: 'Maytag',
+    label: 'Liebherr',
+    searchValue: 'Liebherr',
+    selected: 'checked'
+}, {
+    label: 'Samsung',
+    searchValue: 'Samsung',
     selected: 'checked'
 }, {
     label: 'Whirlpool',
-    searchValue: 'whirlpool',
+    searchValue: 'Whirlpool',
     selected: 'checked'
 }];
 
 var RefrieratorTypes = [
 {
-    label: 'Top Load',
-    searchValue: 'Top Load',
+    label: 'Bottom Freezer',
+    searchValue: 'Bottom Freezer',
     selected: 'checked'
 },
 {
-    label: 'Front Load',
-    searchValue: 'Front Load',
+    label: 'Built-In All Refrigerator',
+    searchValue: 'Built-In All Refrigerator',
+    selected: 'checked'
+},{
+    label: 'Column Refrigerator',
+    searchValue: 'Column Refrigerator',
+    selected: 'checked'
+}{
+    label: 'Side-by-Side',
+    searchValue: 'Side-by-Side',
     selected: 'checked'
 }
 ];

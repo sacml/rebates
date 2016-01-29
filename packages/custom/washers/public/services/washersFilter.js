@@ -1,20 +1,12 @@
 'use strict';
 var WasherBrands =
-[{ 
-   label: 'All',
-    searchValue: 'Amana,GE,Kenmore,LG,Maytag,Whirlpool',
-    selected: 'checked'
-}, {
+[{
     label: 'Amana',
     searchValue: 'Amana',
     selected: 'checked'
 }, {
     label: 'GE',
     searchValue: 'GE',
-    selected: 'checked'
-}, {
-    label: 'Kenmore',
-    searchValue: 'Kenmore',
     selected: 'checked'
 }, {
     label: 'LG',
@@ -25,6 +17,10 @@ var WasherBrands =
     searchValue: 'Maytag',
     selected: 'checked'
 }, {
+    label: 'Samsung',
+    searchValue: 'Samsung',
+    selected: 'checked'
+}, {
     label: 'Whirlpool',
     searchValue: 'whirlpool',
     selected: 'checked'
@@ -32,13 +28,13 @@ var WasherBrands =
 
 var WasherTypes = [
 {
-    label: 'Top Load',
+    label: 'Front Loader',
     searchValue: 'Top Load',
     selected: 'checked'
 },
 {
     label: 'Front Load',
-    searchValue: 'Front Load',
+    searchValue: 'Top Loader',
     selected: 'checked'
 }
 ];
