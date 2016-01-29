@@ -3,63 +3,63 @@ var RefrieratorBrands =
 [ {
     label: 'Bosch',
     searchValue: 'Bosch',
-    selected: 'checked'
+    selected: true
 }, {
     label: 'Fisher & Paykel',
     searchValue: 'Fisher & Paykel',
-    selected: 'checked'
+    selected: true
 }, {
     label: 'Gaggenau',
     searchValue: 'Gaggenau',
-    selected: 'checked'
+    selected: true
 }, {
     label: 'GE Profile',
     searchValue: 'GE Profile',
-    selected: 'checked'
+    selected: true
 }, {
     label: 'Kenmore',
     searchValue: 'Kenmore',
-    selected: 'checked'
+    selected: true
 }, {
     label: 'KitchenAid',
     searchValue: 'KitchenAid',
-    selected: 'checked'
+    selected: true
 }, {
     label: 'LG',
     searchValue: 'LG',
-    selected: 'checked'
+    selected: true
 }, {
     label: 'Liebherr',
     searchValue: 'Liebherr',
-    selected: 'checked'
+    selected: true
 }, {
     label: 'Samsung',
     searchValue: 'Samsung',
-    selected: 'checked'
+    selected: true
 }, {
     label: 'Whirlpool',
     searchValue: 'Whirlpool',
-    selected: 'checked'
+    selected: true
 }];
 
 var RefrieratorTypes = [
 {
     label: 'Bottom Freezer',
     searchValue: 'Bottom Freezer',
-    selected: 'checked'
+    selected: true
 },
 {
     label: 'Built-In All Refrigerator',
     searchValue: 'Built-In All Refrigerator',
-    selected: 'checked'
+    selected: true
 },{
     label: 'Column Refrigerator',
     searchValue: 'Column Refrigerator',
-    selected: 'checked'
+    selected: true
 },{
     label: 'Side-by-Side',
     searchValue: 'Side-by-Side',
-    selected: 'checked'
+    selected: true
 }
 ];
 

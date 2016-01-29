@@ -21,14 +21,14 @@
 
           <h3>Brand:</h3>
           <p class="brand-pro" data-ng-repeat="brand in brandNames">
-            <input type="checkbox" id="b{{$index}}" name="brandName{{band.id}}" value="brand.seachValue" {{brand.selected}}/>
+            <input type="checkbox"  name="brands[]" value="{{brand.searchValue}}" ng-model="brand.selected"/>
             <label for="b{{$index}}">{{brand.label}}</label>
           </p>
                     
 
           <h3>Type:</h3>
           <p class="brand-pro"  data-ng-repeat="productType in productTypes">
-            <input type="checkbox" id="pt{{$index}}" name="productType" />
+            <input type="checkbox" data-ng-model="search['type']" id="pt{{$index}}" name="productType" checked/>
             <label for="pt{{$index}}">{{productType.label}}</label>
           </p>                
         </div>

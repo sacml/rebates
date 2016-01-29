@@ -3,39 +3,39 @@ var WasherBrands =
 [{
     label: 'Amana',
     searchValue: 'Amana',
-    selected: 'checked'
+    selected: true
 }, {
     label: 'GE',
     searchValue: 'GE',
-    selected: 'checked'
+    selected: true
 }, {
     label: 'LG',
     searchValue: 'LG',
-    selected: 'checked'
+    selected: true
 }, {
     label: 'Maytag',
     searchValue: 'Maytag',
-    selected: 'checked'
+    selected: true
 }, {
     label: 'Samsung',
     searchValue: 'Samsung',
-    selected: 'checked'
+    selected: true
 }, {
     label: 'Whirlpool',
     searchValue: 'whirlpool',
-    selected: 'checked'
+    selected: true
 }];
 
 var WasherTypes = [
 {
     label: 'Front Loader',
     searchValue: 'Top Load',
-    selected: 'checked'
+    selected: true
 },
 {
     label: 'Front Load',
     searchValue: 'Top Loader',
-    selected: 'checked'
+    selected: true
 }
 ];
 

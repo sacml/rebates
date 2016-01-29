@@ -17,6 +17,9 @@ angular.module('mean.greenohm').controller('GreenohmController', ['$scope','$sta
     $scope.brandNames =[];
     $scope.productTypes =[];
 
+
+    
+
     $scope.find = function() {      	
     	var path = $location.path();
         var category,dataFilter;
@@ -47,13 +50,30 @@ angular.module('mean.greenohm').controller('GreenohmController', ['$scope','$sta
         $scope.brandNames = dataFilter.brands;
         $scope.productTypes = dataFilter.productTypes;  
         $scope.path = path; 
-        
-        Products.query({category:category},function(results) {
+        var args = {  category:category};
+        console.log($scope)
+        if ($scope.brand){
+           args = {
+            category:category,
+            brands: $scope.search.brand,
+            type: $scope.search.types,
+            }           
+        }
+        Products.query(args,function(results) {
             console.log(results);
             $scope.results= { data: results };
         });
     
     };
+
+    $scope.toggleBrand = function brands(brand) {
+    var idx = $scope.brandNames.indexOf(brand);
+
+        console.log(idx);
+
+    
+    };
+
     $scope.loadProduct = function() {          
         
         console.log("hi");
