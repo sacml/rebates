@@ -1,94 +1,94 @@
 'use strict';
 var featuredWashers = [
 	{
-		"Brand" : "Samsung",
-		"Model": "A23019 Washer",
-    "img": "http://rebatesfromsmud.com/images/mg1.png",
+		"Brand" :"",
+		"Model":"",
+    "img": "",
     "efr": "10.12",
-    "link": "/washers/Samsung-WF56H91**A*"
+    "link": "/product/56a65a8952d2e8b0208be7dd"
 	},
   {
-    "Brand" : "GE",
-    "Model": "GFWR2700H Washer",
-    "img": "http://rebatesfromsmud.com/images/mg2.jpeg",
+    "Brand" :"",
+    "Model":"",
+    "img": "",
     "efr": "10.12",
-    "link": "/washers/GE-GFWR2700H***"
+    "link": "/product/56a65a8952d2e8b0208be7ed"
   },{
-    "Brand" : "Whirlpool",
-    "Model": "WFW81HED*+ Washer",
-    "img": "http://rebatesfromsmud.com/images/mg3.jpg",
+    "Brand" :"",
+    "Model":"",
+    "img": "",
     "efr": "10.12",
-    "link": "/washers/Whirlpool-WFW81HED*+"
+    "link": "/product/56a65b093bc386b9207f4a8b"
   },
 ];
 
 
 var featuredDryers = [
   {
-    "Brand" : "Samsung",
-    "Model": "A23019 Washer",
-    "img": "http://rebatesfromsmud.com/images/mg1.png",
+    "Brand" :"",
+    "Model":"",
+    "img": "",
     "efr": "10.12",
-    "link": "/washers/Samsung-WF56H91**A*"
+    "link": ""
   },
   {
-    "Brand" : "GE",
-    "Model": "GFWR2700H Washer",
-    "img": "http://rebatesfromsmud.com/images/mg2.jpeg",
+    "Brand" :"",
+    "Model": "",
+    "img": "",
     "efr": "10.12",
-    "link": "/washers/GE-GFWR2700H***"
+    "link": ""
   },{
-    "Brand" : "Whirlpool",
-    "Model": "WFW81HED*+ Washer",
-    "img": "http://rebatesfromsmud.com/images/mg3.jpg",
+    "Brand" :"",
+    "Model":"",
+    "img": "",
     "efr": "10.12",
-    "link": "/washers/Whirlpool-WFW81HED*+"
+    "link": ""
   },
 ];
 
 var featuredRefrigerators = [
   {
-    "Brand" : "Samsung",
-    "Model": "A23019 Washer",
-    "img": "http://rebatesfromsmud.com/images/mg1.png",
+    "Brand" :"",
+    "Model":"",
+    "img": "",
     "efr": "10.12",
-    "link": "/washers/Samsung-WF56H91**A*"
+    "link": ""
   },
   {
-    "Brand" : "GE",
-    "Model": "GFWR2700H Washer",
-    "img": "http://rebatesfromsmud.com/images/mg2.jpeg",
+    "Brand" :"",
+    "Model":"",
+    "img": "",
     "efr": "10.12",
-    "link": "/washers/GE-GFWR2700H***"
+    "link": ""
   },{
-    "Brand" : "Whirlpool",
-    "Model": "WFW81HED*+ Washer",
-    "img": "http://rebatesfromsmud.com/images/mg3.jpg",
+    "Brand" :"",
+    "Model":"",
+    "img": "",
     "efr": "10.12",
-    "link": "/washers/Whirlpool-WFW81HED*+"
+    "link": ""
   },
 ];
 
 var featuredAirConditioners = [
   {
-    "Brand" : "Samsung",
-    "Model": "A23019 Washer",
-    "img": "http://rebatesfromsmud.com/images/mg1.png",
+    "Brand" :"Comfort Aire",
+    "Model":"BG-123P",
+    "img": "/products/assets/img/RAC/B73-211cl.jpg",
     "efr": "10.12",
-    "link": "/washers/Samsung-WF56H91**A*"
+    "link": "/product/56a65b74d03a65d020876895"
   },
   {
-    "Brand" : "GE",
-    "Model": "GFWR2700H Washer",
-    "img": "http://rebatesfromsmud.com/images/mg2.jpeg",
+    "Brand" :"LG",
+    "Model":"LW1016ER",
+    "img": "/products/assets/img/RAC/lg-LW1016ER.png",
     "efr": "10.12",
-    "link": "/washers/GE-GFWR2700H***"
+    "link": "product/56a65b74d03a65d02087686d"
   },{
-    "Brand" : "Whirlpool",
-    "Model": "WFW81HED*+ Washer",
-    "img": "http://rebatesfromsmud.com/images/mg3.jpg",
+    "Brand" :"Haier",
+    "Model":"ESA406R-E",
+    "img": "/products/assets/img/RAC/ESA406R-E.jpg",
     "efr": "10.12",
-    "link": "/washers/Whirlpool-WFW81HED*+"
+    "link": "/product/56a65b74d03a65d02087684d"
   },
 ];
 
