@@ -30,7 +30,7 @@ var dryersTypes = [
 angular.module('mean.dryers').factory('DryersFilter', [
 	function($resource) {
 	    return {
-	    	displayName: 'dryers',
+	    	displayName: 'Dryers',
 	    	brands: dryersBrands,
 	    	productTypes: dryersTypes
 	    }

@@ -1,22 +1,22 @@
 'use strict';
 var featuredWashers = [
 	{
-		"Brand" :"",
-		"Model":"",
-    "img": "",
+		"Brand" :"LG",
+		"Model":"WM8000H",
+    "img": "/products/assets/img/CW/WM8000HVA.jpg",
     "efr": "10.12",
     "link": "/product/56a65a8952d2e8b0208be7dd"
 	},
   {
-    "Brand" :"",
-    "Model":"",
-    "img": "",
+    "Brand" :"Whirlpool",
+    "Model":"WFW95HED",
+    "img": "/products/assets/img/CW/wht_front_3f68a.jpg",
     "efr": "10.12",
     "link": "/product/56a65a8952d2e8b0208be7ed"
   },{
-    "Brand" :"",
-    "Model":"",
-    "img": "",
+    "Brand" :"Samsung",
+    "Model":"WF56H91",
+    "img": "/products/assets/img/CW/wf56h9100a_white_front_aaa18.png",
     "efr": "10.12",
     "link": "/product/56a65b093bc386b9207f4a8b"
   },
@@ -25,47 +25,47 @@ var featuredWashers = [
 
 var featuredDryers = [
   {
-    "Brand" :"",
-    "Model":"",
-    "img": "",
+    "Brand" :"Whirlpool",
+    "Model":"WED99HED",
+    "img": "/products/assets/img/CD/wed99hedw_6337a.jpg",
     "efr": "10.12",
-    "link": ""
+    "link" : "/product/56a65b093bc386b9207f4a8b"
   },
   {
-    "Brand" :"",
-    "Model": "",
-    "img": "",
+    "Brand" :"Kenmore",
+    "Model": "8158",
+    "img": "/products/assets/img/CD/spin_prod_1258395512.jpg",
     "efr": "10.12",
-    "link": ""
+    "link" : "/product/56a65b093bc386b9207f4a89"
   },{
-    "Brand" :"",
-    "Model":"",
-    "img": "",
+    "Brand" :"LG",
+    "Model":"DLHX4072",
+    "img": "/products/assets/img/CD/dlhx4072v_front_02c3f.jpg",
     "efr": "10.12",
-    "link": ""
+    "link" : "/product/56a65b093bc386b9207f4a8c"
   },
 ];
 
 var featuredRefrigerators = [
   {
-    "Brand" :"",
-    "Model":"",
-    "img": "",
+    "Brand" :"GE",
+    "Model":"PFH28PSH",
+    "img": "/products/assets/img/RF/RF28HFPDB.jpg",
     "efr": "10.12",
-    "link": ""
+    "link": "product/56a65b22eb43dfc220499f1c"
   },
   {
-    "Brand" :"",
-    "Model":"",
-    "img": "",
+    "Brand" :"Samsung",
+    "Model":"RF28HFPDB",
+    "img": "/products/assets/img/RF/PFH28PSH.jpg",
     "efr": "10.12",
-    "link": ""
+    "link": "/product/56a65b22eb43dfc220499f2c"
   },{
-    "Brand" :"",
-    "Model":"",
-    "img": "",
+    "Brand" :"LG",
+    "Model":"LFC24786",
+    "img": "/products/assets/img/RF/LFC24786.jpg",
     "efr": "10.12",
-    "link": ""
+    "link": "'product/56a65b22eb43dfc220499f0f"
   },
 ];
 

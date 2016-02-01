@@ -1,5 +1,9 @@
 'use strict';
-
+angular.module('mean.greenohm').filter('capitalize', function() {
+    return function(input) {
+        return (!!input) ? input.split(' ').map(function(wrd){return wrd.charAt(0).toUpperCase() + wrd.substr(1).toLowerCase();}).join(' ') : '';
+    }
+});
 
 
 /* jshint -W098 */
@@ -16,9 +20,32 @@ angular.module('mean.greenohm').controller('GreenohmController', ['$scope','$sta
 
     $scope.brandNames =[];
     $scope.productTypes =[];
+    $scope.brands = [];
+    $scope.types = [];
+    $scope.compareItems =[]
 
-
-    
+    function active_tabs() {
+      $(".content-tab-item").hide();
+      $(".content-tab-item").eq(0).addClass("active");
+      
+     $(".title-tab ul li").click(function(){
+         var index = $(this).index();
+         $(".title-tab ul li").removeClass("active");
+         $(this).addClass("active");
+         $(".content-tab-item").each(function(){
+             $(".content-tab-item").removeClass("active");
+             $(".content-tab-item").eq(index).addClass("active");
+         });         
+     });
+    }
+    $scope.showTab = function(index) {    
+      $(".content-tab-item").hide();
+      $(".content-tab-item").eq(index).addClass("active");           
+        $(".content-tab-item").each(function(){
+             $(".content-tab-item").removeClass("active");
+             $(".content-tab-item").eq(index).addClass("active");
+         });        
+    }
 
     $scope.find = function() {      	
     	var path = $location.path();
@@ -51,34 +78,63 @@ angular.module('mean.greenohm').controller('GreenohmController', ['$scope','$sta
         $scope.productTypes = dataFilter.productTypes;  
         $scope.path = path; 
         var args = {  category:category};
-        console.log($scope)
-        if ($scope.brand){
-           args = {
-            category:category,
-            brands: $scope.search.brand,
-            type: $scope.search.types,
-            }           
+        $scope.brands = $scope.brandNames.filter(function(obj){return obj.selected;})
+        $scope.types = $scope.productTypes.filter(function(obj){return obj.selected;})
+         console.log('brands',$scope.brands);
+
+        // console.log(types,$scope.types);
+        if ($scope.brands){
+            var brands = [];
+            $scope.brands.forEach(function(element){
+                brands.push(element.searchValue);
+            });
+           args.brands = brands.join(); 
         }
+        if ($scope.types){
+           var types = []
+           $scope.types.forEach(function(element){
+                types.push(element.searchValue);
+            });
+           args.types = types.join();   
+        }
+        console.log(args);
         Products.query(args,function(results) {
-            console.log(results);
+        results.forEach(function(i) {
+            i.selected = false;
+        });
             $scope.results= { data: results };
+        
         });
     
     };
 
-    $scope.toggleBrand = function brands(brand) {
-    var idx = $scope.brandNames.indexOf(brand);
-
-        console.log(idx);
-
-    
+    $scope.toggleBrand = function (brand) {
+        brand.selected = !brand.selected;
+        $scope.find();
     };
 
-    $scope.loadProduct = function() {          
-        
-        console.log("hi");
-        
-        
+    $scope.toggleProductType = function (productType) {
+        productType.selected = !productType.selected;
+        $scope.find();
+    };
+
+    $scope.toggleCompare = function(product) {            
+        product.selected = !product.selected;
+        if(product.selected){        
+        Products.get({
+            productId: product._id
+          },function(results) {          
+                results.selected   = true;      
+                $scope.compareItems.push(results);      
+            });
+        }else{
+            $scope.compareItems = $scope.compareItems.filter(function(obj){return obj.selected;})
+        };
+
+        $(this).parents('.main-menu').find('ul').slideToggle();
+        event.preventDefault();
+    }
+    $scope.loadProduct = function() {                
         Products.get({
         productId: $stateParams.productId
       },function(results) {
@@ -86,9 +142,11 @@ angular.module('mean.greenohm').controller('GreenohmController', ['$scope','$sta
             $scope.model = $stateParams.model;
             
             $scope.product = results;
-
+            active_tabs();
         });
     
+
+
     };
   }
 ]);

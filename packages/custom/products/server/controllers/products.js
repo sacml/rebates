@@ -100,15 +100,20 @@ module.exports = function(Products) {
          * List of Products
          */
         all: function(req, res){    
-            var query ;
+            var query, args;
+            var query =Product.find({});
             if (req.query.category){
-
-                var query = Product.find({category: req.query.category});
-            }else{
-                var query = Product.find({});
+                query.where('category', req.query.category);
             }
+           
+            if (req.query.brands){
+                query.where('brand').in(req.query.brands.split(','));
+            }
+            // if (req.query.types){
+            //     query.where('productType', req.query.types.split(','));
+            // }
 
-            query.select('_id category brand model width height price colors image capacity');           
+            query.select('_id category brand model width height price color image capacity');           
             query.sort('-created').exec(function(err, products) {
                 if (err) {
                     return res.status(500).json({

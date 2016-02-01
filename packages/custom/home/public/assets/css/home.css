@@ -199,8 +199,10 @@ box-shadow: inset 0px -6px 7px -6px rgba(204,204,204,1);
 }
 .section-product {
   padding: 35px 55px 0 55px;
+  margin-top: 200px;
 }
 .title-section-product {
+
   border-bottom: solid 1px #eaeaea;
 }
 .title-section-product h2 {

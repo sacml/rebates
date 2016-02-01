@@ -1,11 +1,11 @@
 <div class="container" data-ng-controller="GreenohmController" data-ng-init="loadProduct()">
 			<div class="title-section-product">
-				<h2>Featured  {{product.category}}</h2>
-				<a href="/{{product.category}}">View All Washers</a>
+				<h2>Featured  {{product.category | capitalize}}</h2>
+				<a href="/{{product.category}}">View All {{product.category | capitalize}}</a>
 				<div class="clear"></div>
 			</div>
 			<div class="breadcrumb">
-				<a href="index.html">Home</a> > <a href="/{{product.category}}"> {{product.category}}</a> > {{product.brand}} {{product.category}}: {{product.model}}
+				<a href="index.html">Home</a> > <a href="/{{product.category}}"> {{product.category |capitalize}}</a> > {{product.brand}} : {{product.model}}
 			</div><!-- breadcrumb-->
 			<div class="content-left">
 				<div class="list-img">
@@ -35,30 +35,26 @@
 			</div>
 			<div class="content-right">
 				<div class="info-title-pro">
-					<h2 class="title-product"> {{product.brand}} {{product.category}} </h2>
+					<h2 class="title-product"> {{product.brand}} {{product.category |capitalize}} </h2>
 					<p class="model">Model {{product.model}}</p>
 					<p class="price">${{product.price}}<sub>MSRP </sub></p>
 				</div>
 				<div class="link-product">
-					<a href="#" class="find-locally">Find Locally</a>
-					<a href="#" class="price-rebate">$75 Rebate</a>
+					<a href="#" class="find-locally" ng-click="showTab(3)">Find Locally</a>
+					<a href="#" class="price-rebate" ng-click="showTab(2)">$75 Rebate</a>
 				</div>
 				<div class="clear"></div>			
 				<div class="content-detail">
 					<div class="title-tab">
 						<ul>
-							<li>Features</li>
 							<li class="active">Specifications</li>
 							<li>Energy Savings</li>
 							<li >Rebate</li>
 							<li >Where to Buy</li>
 						</ul>
 					</div><!-- title-tab -->
-					<div class="content-tab">
-						<div class="content-tab-item features " style="display:none" >
-																						
-						</div><!-- end contant-tab-item -->
-						<div class="content-tab-item specs active" style="display:none" >
+					<div class="content-tab">				
+						<div class="content-tab-item active" style="display:none" >
 							<ul class="specifications">
 								<li>
 									<div class="specs left">
@@ -78,20 +74,32 @@
 								</li>								
 							</ul>
 						</div><!-- end contant-tab-item -->
-						<div class="content-tab-item" style="display:none" >>
-						3
+						<div class="content-tab-item" style="display:none" >
+						 <div class="energy-start">
+					<img src="/greenohm/assets/img/energy-start.jpg" alt="" />
+					<div class="inner-energy">
+						<h2>
+							Dollar Savings
+							<span>${{product.costSavings}}</span>
+						</h2>
+						<h2>
+							Energy Savings
+							<span>{{product.energySavings}}<sub>Kwh </sub></span>
+						</h2>
+						<p style="color: #999999">Your estimated lifetime
+							electrical energy savings
+							vs. a basic new washer.</p>
+						<p><sup>*</sup>Based on current SMUD electrical rates.</p>
+						<p>Click the “Energy Savings” tab to learn more.</p>
+					</div>
+				</div><!-- end energy-start -->
 						</div><!-- end contant-tab-item -->
-						<div class="content-tab-item " style="display:none" >>
-							
+						<div class="content-tab-item " >
+							rebate
+							<script type="text/javascript" src="https://form.jotform.com/jsform/50895568095976"></script>
 						</div><!-- end contant-tab-item -->
-						<div class="content-tab-item " style="display:none" >>
-							<p>This product is available at the following find local retailers. Please call to confirm availability,</p>
-							<div class="list-map">
-								<div id="locatorList" style="height:400px"></div>
-								<script>      
-								
-							   </script>
-							</div>
+						<div class="content-tab-item " style="display:none" >
+							<p>This product is available at the following find local retailers. Please call to confirm availability,</p>							
 							<ul class="list-location">
 								<li  data-ng-repeat="onlineRetailer in product.onlineRetailers">
 									<div class="logo-location left">
