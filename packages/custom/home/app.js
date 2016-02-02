@@ -23,7 +23,7 @@ Home.register(function(app, auth, database) {
     roles: ['authenticated'],
     menu: 'main'
   });
-  Home.aggregateAsset('font', 'fonts.css');  
+  Home.aggregateAsset('css', 'fonts.css');  
   Home.aggregateAsset('css', 'home.css');
   Home.aggregateAsset('css', 'responsive.css');  
 
