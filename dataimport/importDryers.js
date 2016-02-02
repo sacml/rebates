@@ -40,7 +40,12 @@ function getDryers(client,product){
 	        		w.model = args.Model;
 	        		w.width = product.Width;
 	        		w.height = product.Height;
-	        		w.capacity = product.capacity;
+	        		
+	        		var capacity = DryerRaw.FeatureList.ProductFeature.filter( function(obj){return obj.Feature ===  'Capacity (cu. ft.)';} )[0].Value;
+ 		          	var productType = DryerRaw.FeatureList.ProductFeature.filter( function(obj){return obj.Feature ===  'Type';} )[0].Value;
+	        		w.capacity = capacity;
+	        		w.productType = productType;
+
 	        		w.color = (product.Color) ? product.Color.replace('\n', ' ').split(' ') : undefined;
 	        		w.price = product.Price;
 	        		w.energySavings = DryerRaw.EnergySavings;

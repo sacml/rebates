@@ -39,8 +39,12 @@ function getRoomAirConditioner(client,product){
 	        		w.brand = args.Brand;
 	        		w.model = args.Model;
 	        		w.width = product.Width;
-	        		w.height = product.Height;
-	        		w.capacity = product.capacity;
+	        		w.height = product.Height;	        		
+ 		          	
+ 		          	var productType = AirConditionerRaw.FeatureList.ProductFeature.filter( function(obj){return obj.Feature ===  'Type';} )[0].Value;
+	        		
+	        		w.productType = productType;
+
 	        		w.color = (product.Color) ? product.Color.replace('\n', ' ').split(' ') : undefined;
 	        		w.price = product.Price;
 	        		w.energySavings = AirConditionerRaw.EnergySavings;

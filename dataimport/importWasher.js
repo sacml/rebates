@@ -35,12 +35,16 @@ function getWasher(client,product){
    			}
 	        client.GetClothesWasherDetail(args, function(err, result) {	
  		          	var WasherRaw = result.GetClothesWasherDetailResult;  
+ 		         
  		          	w.category = 'washers'                      	          		
 	        		w.brand = args.Brand;
 	        		w.model = args.Model;
 	        		w.width = product.Width;
 	        		w.height = product.Height;
-	        		w.capacity = product.capacity;
+ 					var capacity = WasherRaw.FeatureList.ProductFeature.filter( function(obj){return obj.Feature ===  'Capacity (cu. ft.)';} )[0].Value;
+ 		          	var productType = WasherRaw.FeatureList.ProductFeature.filter( function(obj){return obj.Feature ===  'Load Configuration';} )[0].Value;
+	        		w.capacity = capacity;
+	        		w.productType = productType;
 	        		w.color = (product.Color) ? product.Color.replace('\n', ' ').split(' ') : undefined;
 	        		w.price = product.Price;
 	        		w.energySavings = WasherRaw.EnergySavings;

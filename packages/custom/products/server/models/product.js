@@ -124,6 +124,11 @@ var ProductSchema = new Schema({
     required: false,
     trim: true
   },
+  productType: {
+    type: String,
+    required: false,
+    trim: true
+  },
   color: {
     type: Array,
     required: false,
