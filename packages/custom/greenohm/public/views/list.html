@@ -1,7 +1,9 @@
-<div class="popup-compare">
+
+<div class="container" data-ng-controller="GreenohmController" data-ng-init="find()" >     
+<div class="popup-compare" >
     <div class="inner-compare">
       <h2>Comparison Assistant</h2>
-      <div class="close">X</div>
+      <div class="close"  ng-click="hideCompare()">X</div>
       <ul class="list-compare"  >
         <li data-ng-repeat="c in compareItems">
           <div class="remove"><span>x</span> Remove</div>
@@ -28,8 +30,6 @@
       </ul>
     </div>
 </div>
-
-<div class="container" data-ng-controller="GreenohmController" data-ng-init="find()" >     
       <div class="banner banner-page">
         <div class="inner-banner">
           <h2>Find a {{sectionName}} and save with a SMUD rebate</h2>
@@ -63,11 +63,14 @@
             <label>{{productType.label}}</label>
           </p>
 
-          <h3>Compare:</h3>
-          <p class="brand-pro"  data-ng-repeat="c in compareItems" ng-click="toggleCompare(c)">
-            <input type="checkbox" ng-model="c.selected" name="c[]" />
-            <label>{{c.model}}</label>
-          </p>                
+          
+            <h3>Compare:</h3>
+            <p class="brand-pro"  data-ng-repeat="c in compareItems" ng-click="toggleCompare(c)">
+              <input type="checkbox" ng-model="c.selected" name="c[]" />
+              <label>{{c.model}}</label>
+            </p>
+            <input type="button" value="Compare" ng-click="showCompare()"/>
+          
         </div>
 
         <div class="right-page">

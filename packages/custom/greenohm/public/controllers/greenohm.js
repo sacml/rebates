@@ -22,7 +22,7 @@ angular.module('mean.greenohm').controller('GreenohmController', ['$scope','$sta
     $scope.productTypes =[];
     $scope.brands = [];
     $scope.types = [];
-    $scope.compareItems =[]
+    $scope.compareItems ={};
 
     function active_tabs() {
       $(".content-tab-item").hide();
@@ -119,20 +119,24 @@ angular.module('mean.greenohm').controller('GreenohmController', ['$scope','$sta
     };
 
     $scope.toggleCompare = function(product) {            
+        
         product.selected = !product.selected;
         if(product.selected){        
         Products.get({
             productId: product._id
           },function(results) {          
                 results.selected   = true;      
-                $scope.compareItems.push(results);      
+                $scope.compareItems[product._id] = results;      
             });
         }else{
-            $scope.compareItems = $scope.compareItems.filter(function(obj){return obj.selected;})
-        };
-
-        $(this).parents('.main-menu').find('ul').slideToggle();
-        event.preventDefault();
+            delete $scope.compareItems[product._id];                  
+        };        
+    }
+    $scope.showCompare = function (argument) {
+      $('.popup-compare').show()
+    }
+    $scope.hideCompare = function (argument) {
+      $('.popup-compare').hide();
     }
     $scope.loadProduct = function() {                
         Products.get({
