@@ -1,100 +1,100 @@
 /* Use font-face for website */
 @font-face {
     font-family: 'Archer-Book';
-    src: url('Archer-Book.eot');
-    src: url('Archer-Book.eot?') format('embedded-opentype'),
-         url('http://rebatesfromsmud.com/fonts/Archer-Book.woff2') format('woff2'),
-         url('Archer-Book.woff') format('woff'),
-         url('Archer-Book.ttf') format('truetype'),
-         url('Archer-Book.svg') format('svg');
+    src: url('/home/assets/css/Archer-Book.eot');
+    src: url('/home/assets/css/Archer-Book.eot?') format('embedded-opentype'),
+         url('/home/assets/css/Archer-Book.woff2') format('woff2'),
+         url('/home/assets/css/Archer-Book.woff') format('woff'),
+         url('/home/assets/css/Archer-Book.ttf') format('truetype'),
+         url('/home/assets/css/Archer-Book.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Archer';
-    src: url('Archer_Bold.eot');
-    src: url('Archer_Bold.eot?') format('embedded-opentype'),
-         url('Archer_Bold.woff2') format('woff2'),
-         url('Archer_Bold.woff') format('woff'),
-         url('Archer_Bold.ttf') format('truetype'),
-         url('Archer_Bold.svg') format('svg');
+    src: url('/home/assets/css/Archer_Bold.eot');
+    src: url('/home/assets/css/Archer_Bold.eot?') format('embedded-opentype'),
+         url('/home/assets/css/Archer_Bold.woff2') format('woff2'),
+         url('/home/assets/css/Archer_Bold.woff') format('woff'),
+         url('/home/assets/css/Archer_Bold.ttf') format('truetype'),
+         url('/home/assets/css/Archer_Bold.svg') format('svg');
     font-weight: 700;
     font-style: normal;
 }
 @font-face {
     font-family: 'Archer';
-    src: url('Archer-Semibold.eot');
-    src: url('Archer-Semibold.eot?') format('embedded-opentype'),
-         url('http://rebatesfromsmud.com/fonts/Archer-Semibold.woff2') format('woff2'),
-         url('Archer-Semibold.woff') format('woff'),
-         url('Archer-Semibold.ttf') format('truetype'),
-         url('Archer-Semibold.svg') format('svg');
+    src: url('/home/assets/css/Archer-Semibold.eot');
+    src: url('/home/assets/css/Archer-Semibold.eot?') format('embedded-opentype'),
+         url('/home/assets/css/Archer-Semibold.woff2') format('woff2'),
+         url('/home/assets/css/Archer-Semibold.woff') format('woff'),
+         url('/home/assets/css/Archer-Semibold.ttf') format('truetype'),
+         url('/home/assets/css/Archer-Semibold.svg') format('svg');
     font-weight: 600;
     font-style: normal;
 }
 @font-face {
     font-family: 'Avenir';
-    src: url('AvenirBlack.eot');
-    src: url('AvenirBlack.eot?') format('embedded-opentype'),
-         url('http://rebatesfromsmud.com/fonts/AvenirBlack.woff2') format('woff2'),
-         url('AvenirBlack.woff') format('woff'),
-         url('AvenirBlack.ttf') format('truetype'),
-         url('AvenirBlack.svg') format('svg');
+    src: url('/home/assets/css/AvenirBlack.eot');
+    src: url('/home/assets/css/AvenirBlack.eot?') format('embedded-opentype'),
+         url('/home/assets/css/AvenirBlack.woff2') format('woff2'),
+         url('/home/assets/css/AvenirBlack.woff') format('woff'),
+         url('/home/assets/css/AvenirBlack.ttf') format('truetype'),
+         url('/home/assets/css/AvenirBlack.svg') format('svg');
     font-weight: 900;
     font-style: normal;
 }
 @font-face {
     font-family: 'Avenir-Heavy';
-    src: url('Avenir-Heavy.eot');
-    src: url('Avenir-Heavy.eot?') format('embedded-opentype'),
-         url('http://rebatesfromsmud.com/fonts/Avenir-Heavy.woff2') format('woff2'),
-         url('Avenir-Heavy.woff') format('woff'),
-         url('Avenir-Heavy.ttf') format('truetype'),
-         url('Avenir-Heavy.svg') format('svg');
+    src: url('/home/assets/css/Avenir-Heavy.eot');
+    src: url('/home/assets/css/Avenir-Heavy.eot?') format('embedded-opentype'),
+         url('/home/assets/css/Avenir-Heavy.woff2') format('woff2'),
+         url('/home/assets/css/Avenir-Heavy.woff') format('woff'),
+         url('/home/assets/css/Avenir-Heavy.ttf') format('truetype'),
+         url('/home/assets/css/Avenir-Heavy.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'AvenirLTStd-Book';
-    src: url('AvenirLTStd-Book.eot');
-    src: url('AvenirLTStd-Book.eot?') format('embedded-opentype'),
-         url('http://rebatesfromsmud.com/fonts/AvenirLTStd-Book.woff2') format('woff2'),
-         url('AvenirLTStd-Book.woff') format('woff'),
-         url('AvenirLTStd-Book.ttf') format('truetype'),
-         url('AvenirLTStd-Book.svg') format('svg');
+    src: url('/home/assets/css/AvenirLTStd-Book.eot');
+    src: url('/home/assets/css/AvenirLTStd-Book.eot?') format('embedded-opentype'),
+         url('/home/assets/css/AvenirLTStd-Book.woff2') format('woff2'),
+         url('/home/assets/css/AvenirLTStd-Book.woff') format('woff'),
+         url('/home/assets/css/AvenirLTStd-Book.ttf') format('truetype'),
+         url('/home/assets/css/AvenirLTStd-Book.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'AvenirLTStd-Roman';
-    src: url('AvenirLTStd-Roman.eot');
-    src: url('AvenirLTStd-Roman.eot?') format('embedded-opentype'),
-         url('http://rebatesfromsmud.com/fonts/AvenirLTStd-Roman.woff2') format('woff2'),
-         url('AvenirLTStd-Roman.woff') format('woff'),
-         url('AvenirLTStd-Roman.ttf') format('truetype'),
-         url('AvenirLTStd-Roman.svg') format('svg');
+    src: url('/home/assets/css/AvenirLTStd-Roman.eot');
+    src: url('/home/assets/css/AvenirLTStd-Roman.eot?') format('embedded-opentype'),
+         url('/home/assets/css/AvenirLTStd-Roman.woff2') format('woff2'),
+         url('/home/assets/css/AvenirLTStd-Roman.woff') format('woff'),
+         url('/home/assets/css/AvenirLTStd-Roman.ttf') format('truetype'),
+         url('/home/assets/css/AvenirLTStd-Roman.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Avenir';
-    src: url('Avenir-Medium.eot');
-    src: url('Avenir-Medium.eot?') format('embedded-opentype'),
-         url('http://rebatesfromsmud.com/fonts/Avenir-Medium.woff2') format('woff2'),
-         url('Avenir-Medium.woff') format('woff'),
-         url('Avenir-Medium.ttf') format('truetype'),
-         url('Avenir-Medium.svg') format('svg');
+    src: url('/home/assets/css/Avenir-Medium.eot');
+    src: url('/home/assets/css/Avenir-Medium.eot?') format('embedded-opentype'),
+         url('/home/assets/css/Avenir-Medium.woff2') format('woff2'),
+         url('/home/assets/css/Avenir-Medium.woff') format('woff'),
+         url('/home/assets/css/Avenir-Medium.ttf') format('truetype'),
+         url('/home/assets/css/Avenir-Medium.svg') format('svg');
     font-weight: 500;
     font-style: normal;
 }
 @font-face {
     font-family: 'MyriadPro-Regular';
-    src: url('MyriadPro-Regular.eot');
-    src: url('MyriadPro-Regular.eot?') format('embedded-opentype'),
-         url('http://rebatesfromsmud.com/fonts/MyriadPro-Regular.woff2') format('woff2'),
-         url('MyriadPro-Regular.woff') format('woff'),
-         url('MyriadPro-Regular.ttf') format('truetype'),
-         url('MyriadPro-Regular.svg') format('svg');
+    src: url('/home/assets/css/MyriadPro-Regular.eot');
+    src: url('/home/assets/css/MyriadPro-Regular.eot?') format('embedded-opentype'),
+         url('/home/assets/css/MyriadPro-Regular.woff2') format('woff2'),
+         url('/home/assets/css/MyriadPro-Regular.woff') format('woff'),
+         url('/home/assets/css/MyriadPro-Regular.ttf') format('truetype'),
+         url('/home/assets/css/MyriadPro-Regular.svg') format('svg');
     font-weight: 500;
     font-style: normal;
 }
