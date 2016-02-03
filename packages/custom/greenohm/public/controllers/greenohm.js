@@ -1,4 +1,7 @@
 'use strict';
+
+angular.module('mean.greenohm', ['angularUtils.directives.dirPagination']);
+
 angular.module('mean.greenohm').filter('capitalize', function() {
     return function(input) {
         return (!!input) ? input.split(' ').map(function(wrd){return wrd.charAt(0).toUpperCase() + wrd.substr(1).toLowerCase();}).join(' ') : '';
@@ -23,6 +26,9 @@ angular.module('mean.greenohm').controller('GreenohmController', ['$scope','$sta
     $scope.brands = [];
     $scope.types = [];
     $scope.compareItems ={};
+    
+    $scope.currentPage = 1;
+    $scope.pageSize = 10;
 
     function active_tabs() {
       $(".content-tab-item").hide();
@@ -38,7 +44,10 @@ angular.module('mean.greenohm').controller('GreenohmController', ['$scope','$sta
          });         
      });
     }
-    $scope.showTab = function(index) {    
+    $scope.showTab = function(index) {   
+      $(".title-tab ul li").removeClass("active");
+      $(".title-tab ul li").eq(index).addClass("active") ;
+
       $(".content-tab-item").hide();
       $(".content-tab-item").eq(index).addClass("active");           
         $(".content-tab-item").each(function(){
@@ -80,9 +89,8 @@ angular.module('mean.greenohm').controller('GreenohmController', ['$scope','$sta
         var args = {  category:category};
         $scope.brands = $scope.brandNames.filter(function(obj){return obj.selected;})
         $scope.types = $scope.productTypes.filter(function(obj){return obj.selected;})
-         console.log('brands',$scope.brands);
 
-        // console.log(types,$scope.types);
+
         if ($scope.brands){
             var brands = [];
             $scope.brands.forEach(function(element){
@@ -97,12 +105,13 @@ angular.module('mean.greenohm').controller('GreenohmController', ['$scope','$sta
             });
            args.types = types.join();   
         }
-        console.log(args);
-        Products.query(args,function(results) {
-        results.forEach(function(i) {
-            i.selected = false;
-        });
-            $scope.results= { data: results };
+
+        Products.query(args,function(results) {          
+          results.forEach(function(i) {
+              i.selected = false;
+          });
+                    
+          $scope.results= { data: results };
         
         });
     

@@ -1265,6 +1265,17 @@ text-align: center;
     cursor: pointer;
   }
 
+.compare {
+    display: inline-block;
+    width: 71px;
+    height: 23px;
+    text-align: center;
+    line-height: 23px;
+    background: #999999;
+    color: #fff;
+    cursor: pointer;
+}
+
 .zoom img::selection { background-color: transparent; }
 .zoomImg {
 height: auto !important;

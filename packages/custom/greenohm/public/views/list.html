@@ -8,7 +8,7 @@
         <li data-ng-repeat="c in compareItems">
           <div class="remove"><span>x</span> Remove</div>
           <div class="wrapper-img-product">
-            <img src="{{c.img}}" alt="">
+            <img src="{{c.image}}" alt="{{c.brand}} {{c.model}}">
             <h3>{{c.brand}} {{c.model}}</h3>
             <a href="">Savings ${{c.costSavings}}</a>
           </div>
@@ -17,13 +17,13 @@
               <li>  
                 <h3>Specs: </h3>
               </li>             
-              <li data-ng-repeat="spec in product.features">                
+              <li data-ng-repeat="spec in c.features">                
                 <h4>{{spec.Feature}}</h4>     
                 <p>{{spec.Value}}</p>
               </li>                              
             </ul>
             <div class="link-product link-popup">
-              <a class="find-locally" href="/products/{{c._id}}">Find Locally</a>
+              <a class="find-locally" href="/product/{{c._id}}">Find Locally</a>
             </div>
           </div><!-- end detail-compare -->
         </li>                
@@ -69,7 +69,8 @@
               <input type="checkbox" ng-model="c.selected" name="c[]" />
               <label>{{c.model}}</label>
             </p>
-            <input type="button" value="Compare" ng-click="showCompare()"/>
+            
+            <label for="pr1" ng-click="showCompare()" class="compare"><span class="compare">Compare</span></label>
           
         </div>
 
@@ -87,15 +88,14 @@
           </div>
           
           <ul class="title-product-washer list-product-compare">                      
-            <li data-ng-repeat="product in results.data">   
-
+            <li dir-paginate="product in results.data | itemsPerPage: pageSize" current-page="currentPage">   
               <div class="brand-product left">  
                 <h2 class="show-respon">{{product.brand}}</h2>
                 <div class="wrapper-img">
                   <a href="/product/{{product._id}}"><img src="{{product.image}}" alt="{{product.brand}}-{{product.model}}"></a>                 
                   <p class="brand-pro" ng-click="toggleCompare(product)">
                     <input type="checkbox"  name="product" ng-model="product.selected"  />
-                    <label><span class="toogle-menu">Compare</span></label>
+                    <label><span>Compare</span></label>
                   </p>
               </div>
               <span>{{product.brand}}</span>
@@ -109,16 +109,11 @@
             </li>            
           </ul>
 
-          <div class="page-page">
-            <p>Viewing {{results.data.length}} {{sectionName}}</p>
-            <ul>
-              <li><a ng-click="showPage(1)">First</a></li>
-              <li><span>1</span></li>
-              <li><a ng-click="showPage(idx)">2</a></li>              
-              <li><a ng-click="showPage(1000)">Last</a></li>
-            </ul-->
-            <div class="clear"></div>
-          </div--><!-- end page-page -->
+          
+          <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="/greenohm/assets/tpl/dirPagination.tpl.html"></dir-pagination-controls>
+          
+          <div class="clear"></div>
+          
         </div>
         <div class="clear"></div>
         </form>
