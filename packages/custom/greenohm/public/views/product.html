@@ -1,0 +1,138 @@
+<div class="container" data-ng-controller="GreenohmController" data-ng-init="loadProduct()">
+			<div class="title-section-product">
+				<h2>Featured  {{product.category | capitalize}}</h2>
+				<a href="/{{product.category}}">View All {{product.category | capitalize}}</a>
+				<div class="clear"></div>
+			</div>
+			<div class="breadcrumb">
+				<a href="index.html">Home</a> > <a href="/{{product.category}}"> {{product.category |capitalize}}</a> > {{product.brand}} : {{product.model}}
+			</div><!-- breadcrumb-->
+			<div class="content-left">
+				<div class="list-img">
+					<div class="img-larger">
+						<span class='zoom' id='ex1'><img src="{{product.image}}" alt="" class="zoom-normal" /></span>
+					</div>									
+				</div><!-- end list-img -->
+				<div class="energy-start">
+					<img src="/greenohm/assets/img/energy-start.jpg" alt="" />
+					<div class="inner-energy">
+						<h2>
+							Dollar Savings
+							<span>${{product.costSavings}}</span>
+						</h2>
+						<h2>
+							Energy Savings
+							<span>{{product.energySavings}}<sub>Kwh </sub></span>
+						</h2>
+						<p style="color: #999999">Your estimated lifetime
+							electrical energy savings
+							vs. a basic new washer.</p>
+						<p><sup>*</sup>Based on current SMUD electrical rates.</p>
+						<p>Click the “Energy Savings” tab to learn more.</p>
+					</div>
+				</div><!-- end energy-start -->
+				<div class="clear"></div>
+			</div>
+			<div class="content-right">
+				<div class="info-title-pro">
+					<h2 class="title-product"> {{product.brand}} {{product.category |capitalize}} </h2>
+					<p class="model">Model {{product.model}}</p>
+					<p class="price">${{product.price}}<sub>MSRP </sub></p>
+				</div>
+				<div class="link-product">
+					<a href="#" class="find-locally" ng-click="showTab(3)">Find Locally</a>
+					<a href="#" class="price-rebate" ng-click="showTab(2)">$75 Rebate</a>
+				</div>
+				<div class="clear"></div>			
+				<div class="content-detail">
+					<div class="title-tab">
+						<ul>
+							<li class="active">Specifications</li>
+							<li>Product Description</li>
+							<li>Rebate</li>
+							<li>Where to Buy</li>
+						</ul>
+					</div><!-- title-tab -->
+					<div class="content-tab">				
+						<div class="content-tab-item active" style="display:none" >
+							<ul class="specifications">
+								<li>
+									<div class="specs left">
+										Specs:	
+									</div>
+									<div class="details left">Details:</div>
+									<div class="clear"></div>
+								</li>
+								<li data-ng-repeat="spec in product.features">
+									<div class="specs left">
+										{{spec.Feature}}
+									</div>
+									<div class="details left">
+										{{spec.Value}}
+									</div>
+									<div class="clear"></div>
+								</li>								
+							</ul>
+						</div><!-- end contant-tab-item -->
+						<div class="content-tab-item" style="display:none" >
+							{{product.description}}
+						</div><!-- end energy-start -->
+						</div><!-- end contant-tab-item -->
+						<div class="content-tab-item " >
+							rebate
+							<iframe src="https://form.jotform.com/jsform/50895568095976">
+							</iframe>
+						</div><!-- end contant-tab-item -->
+						<div class="content-tab-item " style="display:none" >
+							<p>This product is available at the following find local retailers. Please call to confirm availability,</p>							
+							<ul class="list-location">
+								<li  data-ng-repeat="onlineRetailer in product.onlineRetailers">
+									<div class="logo-location left">
+									</div>
+									<div class="address-location left">										
+										<p>
+										{{onlineRetailer.Price}}<br />
+										{{onlineRetailer.Retailer}}<br />
+										</p>
+									</div>
+									<div class="icon-location left">
+										<div class="order-location">
+										</div>
+										<div class="get-direction">										
+										<a href="{{onlineRetailer.URL}}">buy</a>
+										</div>
+									</div>
+								</li>								
+							</ul>
+							<ul class="list-location">								
+								<li dir-paginate="retailer in product.offlineRetailers | itemsPerPage: pageSize" current-page="currentPage">   
+									<!--div class="logo-location left">
+										<img src="" alt="{{retailer.Retailer}}" />
+									</div-->
+									<div class="address-location left">
+										<p>{{retailer.Retailer}}<br />
+											{{retailer.Address}}<br />
+											{{retailer.City}}, {{retailer.State}} {{retailer.Zip}} <br />
+										</p>										
+									</div>
+									<div class="icon-location left">
+										<div class="order-location">											
+										</div>
+										<div class="get-direction">										
+										<a href="#">get directions</a>
+										</div>
+									</div>
+								</li>								
+							</ul>
+							<div class="page-page">
+							 <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="/greenohm/assets/tpl/dirPagination.tpl.html"></dir-pagination-controls>
+						<div class="clear"></div>
+					</div><!-- end page-page -->
+							</div>
+						</div><!-- end contant-tab-item -->
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+</div>

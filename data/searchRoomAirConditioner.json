@@ -1,0 +1,53 @@
+{
+    "SearchCriteriaDetail": [{
+        "Feature": "Brand",
+        "Label": "Frigidaire",
+        "Value": "29.00",
+        "SortOrder": 1
+    }, {
+        "Feature": "Brand",
+        "Label": "Midea",
+        "Value": "10.00",
+        "SortOrder": 1
+    }, {
+        "Feature": "Cooling Capacity BTU/hr",
+        "Label": "Max",
+        "Value": "8000.00",
+        "SortOrder": 5
+    }, {
+        "Feature": "Cooling Capacity BTU/hr",
+        "Label": "Min",
+        "Value": "10000.00",
+        "SortOrder": 5
+    }, {
+        "Feature": "CEER",
+        "Label": "Max",
+        "Value": "12.10",
+        "SortOrder": 7
+    }, {
+        "Feature": "CEER",
+        "Label": "Min",
+        "Value": "10.30",
+        "SortOrder": 7
+    }, {
+        "Feature": "Type",
+        "Label": "Through the Wall",
+        "Value": "5.00",
+        "SortOrder": 18
+    }, {
+        "Feature": "Type",
+        "Label": "Window",
+        "Value": "34.00",
+        "SortOrder": 18
+    }, {
+        "Feature": "Price",
+        "Label": "Min",
+        "Value": "0",
+        "SortOrder": 100
+    }, {
+        "Feature": "Price",
+        "Label": "Max",
+        "Value": "0",
+        "SortOrder": 100
+    }]
+}
