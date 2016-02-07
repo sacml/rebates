@@ -10,17 +10,17 @@ angular.module('mean.greenohm').filter('capitalize', function() {
 
 
 /* jshint -W098 */
-angular.module('mean.greenohm').controller('GreenohmController', ['$scope','$stateParams','Global', 'Greenohm','$location', 
+angular.module('mean.greenohm').controller('GreenohmController', ['$scope', '$filter','$stateParams','Global', 'Greenohm','$location', 
     'Products','WashersFilter',
 	'DryersFilter',
     'AcFilter',
     'RefrigeratorsFilter',
-  function($scope, $stateParams, Global, Greenohm,$location, Products, WashersFilter,DryersFilter,  AcFilter , RefrigeratorsFilter) {
+  function($scope, $filter,$stateParams, Global, Greenohm,$location, Products, WashersFilter,DryersFilter,  AcFilter , RefrigeratorsFilter) {
     $scope.global = Global;
     $scope.package = {
       name: 'greenohm'
     };
-
+     var orderBy = $filter('orderBy');
     $scope.brandNames =[];
     $scope.productTypes =[];
     $scope.brands = [];
@@ -29,7 +29,7 @@ angular.module('mean.greenohm').controller('GreenohmController', ['$scope','$sta
     
     $scope.currentPage = 1;
     $scope.pageSize = 10;
-
+    $scope.predicate = "";
     function active_tabs() {
       $(".content-tab-item").hide();
       $(".content-tab-item").eq(0).addClass("active");
@@ -44,6 +44,13 @@ angular.module('mean.greenohm').controller('GreenohmController', ['$scope','$sta
          });         
      });
     }
+
+    $scope.order = function(predicate) {
+      $scope.predicate = predicate;
+      $scope.reverse = ($scope.predicate === predicate) ? !$scope.reverse : false;
+      $scope.results.data = orderBy($scope.results.data, predicate, $scope.reverse);
+    };
+
     $scope.showTab = function(index) {   
       $(".title-tab ul li").removeClass("active");
       $(".title-tab ul li").eq(index).addClass("active") ;
