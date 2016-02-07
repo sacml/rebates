@@ -837,7 +837,7 @@ span.form-w50.last > input {
   font-size: 13px;
   color: #766a62;
 }
-.search {
+/*.search {
   background:url("/home/assets/img/icon-search2.png") no-repeat;
   background-position: center center;
   height: 34px;
@@ -845,7 +845,7 @@ span.form-w50.last > input {
   border: none;
   cursor: pointer;
   margin-right: 5px;
-  }
+  }*/
   .search-location {
   background:url("/home/assets/img/icon-location.png") no-repeat;
   background-position: center center;

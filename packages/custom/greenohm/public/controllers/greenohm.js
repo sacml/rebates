@@ -1,5 +1,28 @@
 'use strict';
 
+var cats = [
+{
+    label: 'Washers',
+    searchValue: 'washers',
+    selected: true
+},
+{
+    label: 'Dryers',
+    searchValue: 'dryers',
+    selected: true
+},
+{
+    label: 'Air Conditioners',
+    searchValue: 'airconditioners',
+    selected: true
+},
+{
+    label: 'Refrigerators',
+    searchValue: 'refrigerators',
+    selected: true
+}
+];
+
 angular.module('mean.greenohm', ['angularUtils.directives.dirPagination']);
 
 angular.module('mean.greenohm').filter('capitalize', function() {
@@ -22,6 +45,7 @@ angular.module('mean.greenohm').controller('GreenohmController', ['$scope', '$fi
     };
      var orderBy = $filter('orderBy');
     $scope.brandNames =[];
+    $scope.categories =[];
     $scope.productTypes =[];
     $scope.brands = [];
     $scope.types = [];
@@ -87,7 +111,27 @@ angular.module('mean.greenohm').controller('GreenohmController', ['$scope', '$fi
                 dataFilter= AcFilter;
                 console.log('2');
             break;
+            case '/search':  
+            category='search';              
+            console.log('5');
+            break;
         }
+
+        
+        if (category=== 'search'){
+          var searchTerm = $location.search()['term'];
+
+          $scope.sectionName = "Search:" + searchTerm;   
+          $scope.categories = cats;
+          
+          Greenohm.query({term: searchTerm},function (results){
+            results.forEach(function(i) {
+              i.selected = false;
+          });                  
+            $scope.results= { data: results };
+          });
+
+        }else{
 
         $scope.sectionName = dataFilter.displayName;   
         $scope.brandNames = dataFilter.brands;
@@ -121,6 +165,7 @@ angular.module('mean.greenohm').controller('GreenohmController', ['$scope', '$fi
           $scope.results= { data: results };
         
         });
+        }
     
     };
 

@@ -2,7 +2,10 @@
 
 angular.module('mean.greenohm').config(['$stateProvider',
   function($stateProvider) {
-    $stateProvider.state('Washer List page', {
+    $stateProvider.state('search', {
+      url: '/search',
+      templateUrl: 'greenohm/views/list.html'
+    }).state('Washer List page', {
       url: '/washers',
       templateUrl: 'greenohm/views/list.html'
     }).state('Dryers List page', {
