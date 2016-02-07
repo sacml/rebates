@@ -22,7 +22,7 @@ var WasherBrands =
     selected: true
 }, {
     label: 'Whirlpool',
-    searchValue: 'whirlpool',
+    searchValue: 'Whirlpool',
     selected: true
 }];
 
