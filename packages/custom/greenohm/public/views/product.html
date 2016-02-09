@@ -1,9 +1,9 @@
 <div class="container" data-ng-controller="GreenohmController" data-ng-init="loadProduct()">
-			<div class="title-section-product">
-				<h2>Featured  {{product.category | capitalize}}</h2>
-				<a href="/{{product.category}}">View All {{product.category | capitalize}}</a>
-				<div class="clear"></div>
-			</div>
+<div class="title-section-product">
+	<h2>Featured  {{product.category | capitalize}}</h2>
+	<a href="/{{product.category}}">View All {{product.category | capitalize}}</a>
+	<div class="clear"></div>
+</div>
 			<div class="breadcrumb">
 				<a href="index.html">Home</a> > <a href="/{{product.category}}"> {{product.category |capitalize}}</a> > {{product.brand}} : {{product.model}}
 			</div><!-- breadcrumb-->
