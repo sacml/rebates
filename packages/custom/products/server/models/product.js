@@ -5,6 +5,41 @@
  */
 var mongoose = require('mongoose'),
   Schema = mongoose.Schema;
+var AddressSchema = new Schema({
+   Retailer:{
+    type: String,
+    required: true,
+    trim: true
+  },
+  Address:{
+    type: String,
+    required: true,
+    trim: true
+  },
+  City: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  State:{
+    type: String,
+    required: true,
+    trim: true
+  },
+  Zip: {
+    type: String,
+    required: false,
+    trim: true
+  },
+  Lat: {
+    type: Number,
+    required: false
+  },
+  Lon: {
+    type: Number,
+    required: false
+  }
+});
 
 var OnlineRetailerSchema = new Schema({
   Retailer: {
@@ -63,6 +98,14 @@ var OfflineRetailerSchema = new Schema({
     trim: true
   },
   Price: {
+    type: Number,
+    required: false
+  },
+  Lat: {
+    type: Number,
+    required: false
+  },
+  Lon: {
     type: Number,
     required: false
   }
@@ -190,3 +233,4 @@ mongoose.model('Feature', FeatureSchema);
 
 mongoose.model('OnlineRetailer', OnlineRetailerSchema);
 mongoose.model('OfflineRetailer', OfflineRetailerSchema);
+mongoose.model('Address', AddressSchema);

@@ -1,5 +1,12 @@
 'use strict';
 
+angular.module('mean.greenohm').config(function(uiGmapGoogleMapApiProvider) {
+    uiGmapGoogleMapApiProvider.configure({
+        //    key: 'your api key',
+        v: '3.20', //defaults to latest 3.X anyhow
+        libraries: 'weather,geometry,visualization'
+    });
+})
 angular.module('mean.greenohm').config(['$stateProvider',
   function($stateProvider) {
     $stateProvider.state('search', {
@@ -22,4 +29,4 @@ angular.module('mean.greenohm').config(['$stateProvider',
       templateUrl: 'greenohm/views/product.html'
     });
   }
-]);
+])

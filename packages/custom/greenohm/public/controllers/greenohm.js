@@ -24,14 +24,14 @@ var cats = [
 ];
 
 angular.module('mean.greenohm', ['angularUtils.directives.dirPagination']);
-
+angular.module('mean.greenohm', ['uiGmapgoogle-maps']); 
 angular.module('mean.greenohm').filter('capitalize', function() {
     return function(input) {
         return (!!input) ? input.split(' ').map(function(wrd){return wrd.charAt(0).toUpperCase() + wrd.substr(1).toLowerCase();}).join(' ') : '';
     }
 });
 
-
+ 
 /* jshint -W098 */
 angular.module('mean.greenohm').controller('GreenohmController', ['$scope', '$filter','$stateParams','Global', 'Greenohm','$location', 
     'Products','WashersFilter',
@@ -50,7 +50,7 @@ angular.module('mean.greenohm').controller('GreenohmController', ['$scope', '$fi
     $scope.brands = [];
     $scope.types = [];
     $scope.compareItems ={};
-    
+    $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
     $scope.currentPage = 1;
     $scope.pageSize = 10;
     $scope.predicate = "";

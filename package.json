@@ -64,6 +64,7 @@
     "view-helpers": "latest"
   },
   "devDependencies": {
+    "async": "^1.5.2",
     "connect-modrewrite": "latest",
     "del": "latest",
     "expect.js": "latest",
@@ -97,6 +98,7 @@
     "karma-requirejs": "latest",
     "karma-script-launcher": "latest",
     "mocha": "latest",
+    "node-geocoder": "^3.6.2",
     "protractor": "latest",
     "require-dir": "latest",
     "requirejs": "latest",

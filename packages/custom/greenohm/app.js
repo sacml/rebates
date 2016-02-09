@@ -26,8 +26,9 @@ Greenohm.register(function(app, auth, database) {
   
   Greenohm.aggregateAsset('css', 'greenohm.css');
   Greenohm.aggregateAsset('js', 'jquery-1.10.2.js');
-  Greenohm.aggregateAsset('js', 'easyLocator.js');
-  Greenohm.aggregateAsset('js', 'jquery.zoom.js');
+  
+  Greenohm.aggregateAsset('js', 'lodash.min.js');
+  Greenohm.aggregateAsset('js', 'angular-simple-logger.min.js');
 
   Greenohm.aggregateAsset('js', 'mscrollbar/jquery.mCustomScrollbar.js');
   Greenohm.aggregateAsset('js', 'markerclusterer.min.js');
