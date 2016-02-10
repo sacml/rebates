@@ -41,7 +41,7 @@
     "jsonwebtoken": "latest",
     "lodash": "latest",
     "meanio": "latest",
-    "mongoose": "latest",
+    "mongoose": "4.4.2",
     "morgan": "latest",
     "ms": "latest",
     "nodemailer": "latest",
