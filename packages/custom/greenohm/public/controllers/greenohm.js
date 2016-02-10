@@ -121,7 +121,7 @@ angular.module('mean.greenohm').controller('GreenohmController', ['$scope', '$fi
         if (category=== 'search'){
           var searchTerm = $location.search()['term'];
 
-          $scope.sectionName = "Search:" + searchTerm;   
+          $scope.sectionName = "Search: " + searchTerm;   
           $scope.categories = cats;
           
           Greenohm.query({term: searchTerm},function (results){
