@@ -18,7 +18,7 @@ var featuredWashers = [
     "Model":"WF56H91",
     "img": "/products/assets/img/CW/wf56h9100a_white_front_aaa18.png",
     "efr": "10.12",
-    "link": "/product/56a65b093bc386b9207f4a8b"
+    "link": "/product/56a65a8952d2e8b0208be7eb"
   },
 ];
 
@@ -50,7 +50,7 @@ var featuredRefrigerators = [
   {
     "Brand" :"GE",
     "Model":"PFH28PSH",
-    "img": "/products/assets/img/RF/RF28HFPDB.jpg",
+    "img": "/products/assets/img/RF/GE-PFH28PSH.jpg",
     "efr": "10.12",
     "link": "product/56a65b22eb43dfc220499f1c"
   },
