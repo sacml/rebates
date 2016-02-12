@@ -3,26 +3,26 @@ var dryersBrands =
 [ {
     label: 'Blomberg',
     searchValue: 'Blomberg',
-    selected: true
+    selected: false
 }, {
     label: 'Kenmore',
     searchValue: 'Kenmore',
-    selected: true
+    selected: false
 }, {
     label: 'LG',
     searchValue: 'LG',
-    selected: true
+    selected: false
 }, {
     label: 'Whirlpool',
     searchValue: 'whirlpool',
-    selected: true
+    selected: false
 }];
 
 var dryersTypes = [
 {
     label: 'Front Loader',
     searchValue: 'Front Loader',
-    selected: true
+    selected: false
 }
 ];
 

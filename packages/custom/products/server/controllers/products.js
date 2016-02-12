@@ -109,9 +109,10 @@ module.exports = function(Products) {
             if (req.query.brands){
                 query.where('brand').in(req.query.brands.split(','));
             }
-            // if (req.query.types){
-            //     query.where('productType', req.query.types.split(','));
-            // }
+            
+            if (req.query.types){
+                 query.where('productType').in(req.query.types.split(','));
+            }
 
             query.select('_id category brand model width height price color image capacity');           
             query.sort('-created').exec(function(err, products) {

@@ -3,23 +3,23 @@ var AcBrands =
 [ {
     label: 'Frigidaire',
     searchValue: 'Frigidaire',
-    selected: true
+    selected: false
 }, {
     label: 'Midea',
     searchValue: 'Midea',
-    selected: true
+    selected: false
 }];
 
 var AcTypes = [
 {
     label: 'Through the Wall',
     searchValue: 'Through the Wall',
-    selected: true
+    selected: false
 },
 {
     label: 'Window',
     searchValue: 'Window',
-    selected: true
+    selected: false
 }
 ];
 

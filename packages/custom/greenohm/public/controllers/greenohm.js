@@ -4,22 +4,22 @@ var cats = [
 {
     label: 'Washers',
     searchValue: 'washers',
-    selected: true
+    selected: false
 },
 {
     label: 'Dryers',
     searchValue: 'dryers',
-    selected: true
+    selected: false
 },
 {
     label: 'Air Conditioners',
     searchValue: 'airconditioners',
-    selected: true
+    selected: false
 },
 {
     label: 'Refrigerators',
     searchValue: 'refrigerators',
-    selected: true
+    selected: false
 }
 ];
 

@@ -6,7 +6,7 @@
           <div class="close"  ng-click="hideCompare()">X</div>
           <ul class="list-compare"  >
             <li data-ng-repeat="c in compareItems">
-              <div class="remove"><span>x</span> Remove</div>
+              <div class="remove" ><a ng-click="toggleCompare(c)"><span >x</span> Remove</a></div>
               <div class="wrapper-img-product">
                 <img src="{{c.image}}" alt="{{c.brand}} {{c.model}}">
                 <h3>{{c.brand}} {{c.model}}</h3>
@@ -78,14 +78,14 @@
 
         <div class="right-page">
           <div class="title-product-washer title-product-washer-top">
-            <div class="washer left" ><a ng-click="order('category')"><b>{{sectionName}}:</b>  </a></div>
-            <div class="brand left" ><a ng-click="order('brand')">  Brand</a></div>
-            <div class="model left" ><a ng-click="order('model')">  Model </a></div>
-            <div class="width left" ><a ng-click="order('width')">Width </a></div>
-            <div class="height left" ><a ng-click="order('height')"> Height</a></div>
-            <div class="capacity left" ><a ng-click="order('capacity')"> Capacity</a></div>
-            <div class="color left" ><a ng-click="order('color')">  Color</a></div>
-            <div class="price-product left" ><a ng-click="order('price')">  Price ($$$)</a></div>
+            <div class="washer left" ><a class="pointer" ng-click="order('category')"><b>{{sectionName}}:</b>  </a></div>
+            <div class="brand left" ><a class="pointer" ng-click="order('brand')">  Brand</a></div>
+            <div class="model left" ><a class="pointer" ng-click="order('model')">  Model </a></div>
+            <div class="width left" ><a class="pointer" ng-click="order('width')">Width </a></div>
+            <div class="height left" ><a class="pointer" ng-click="order('height')"> Height</a></div>
+            <div class="capacity left" ><a class="pointer" ng-click="order('capacity')"> Capacity</a></div>
+            <div class="color left" ><a class="pointer" ng-click="order('color')">  Color</a></div>
+            <div class="price-product left" ><a class="pointer" ng-click="order('price')">  MSRP ($$$)</a></div>
             <div class="clear"></div>
           </div>
           
