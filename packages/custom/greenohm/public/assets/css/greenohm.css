@@ -307,9 +307,18 @@ span.form-w50.last > input {
 @media screen and (max-width: 767px) {
 #header {
   padding:  15px 0;
+  padding-right: 10px;
 }
 .main-menu {
 	position: relative;
+}
+
+.content{
+	margin-top:240px;	
+}
+
+.header-right{
+	margin-top:0;	
 }
 	.main-menu ul {
   list-style: outside none none;
@@ -458,10 +467,11 @@ span.form-w50.last > input {
 .title-product-washer.list-product-compare > li {
   width: 50%;
 }
+
 }
 @media screen and (max-width: 540px) {
 	.banner {
-  background:#f0e4d6 url("../images/bg-respon.jpg") no-repeat;
+  background:#f0e4d6 url("../img/bg-respon.jpg") no-repeat;
   background-size: 100% 100px;
   background-position: left bottom;
   padding-left: 0;
@@ -561,5 +571,10 @@ span.form-w50.last > input {
 }
 }
 
+@media all{
+[class='container ng-scope']{
+	padding: 0 15px 125px;
+}	
+}
 
 
