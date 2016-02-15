@@ -65,7 +65,7 @@ var featuredRefrigerators = [
     "Model":"LFC24786",
     "img": "/products/assets/img/RF/LFC24786.jpg",
     "efr": "10.12",
-    "link": "'product/56a65b22eb43dfc220499f0f"
+    "link": "/product/56a65b22eb43dfc220499f0f"
   },
 ];
 
