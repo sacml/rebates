@@ -6,6 +6,7 @@ $(document).ready(function(){
 		$('.toogle-menu').click(function(event){
 		$(this).parents('.main-menu').find('ul').slideToggle();
 		event.preventDefault();
+		event.stopPropagation();
 	});
 	
 	$("a").click(function(event) {
@@ -21,5 +22,8 @@ $(document).resize(function(){
 	var h_header = $('#header').outerHeight();
 	$('#content').css('margin-top',h_header);
 });
- 
+  
+ $(document).click(function(){
+     $('.main-menu').find('ul').slideUp();
+});
   
