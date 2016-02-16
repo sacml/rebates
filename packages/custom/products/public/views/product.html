@@ -23,7 +23,7 @@
     <div class="form-group" ng-class="{ 'has-error' : submitted && productForm.price.$invalid }">
       <label mean-token="'edit-price'" for="price" class="col-md-2 control-label">MSRP</label>
       <div class="col-md-10">
-        <input name="price" type="text" class="form-control" data-ng-model="product.price" id="price" placeholder="MSRP" required>
+        <input name="price" type="text" class="form-control" data-ng-model="product.price" id="price" placeholder="MSRP">
         <div ng-show="submitted && productForm.price.$invalid" class="help-block">
           <p ng-show="productForm.price.$error.required">MSRP is required</p>
         </div>
