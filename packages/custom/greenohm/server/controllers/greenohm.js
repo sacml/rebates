@@ -31,7 +31,7 @@ module.exports = function(Products) {
 					var query, args;
 		            var query =Product.find({});
 		            if (req.query.category){
-		                query.where('category', req.query.category);
+		                query.where('category').in(req.query.category.split(','));
 		            }
 		           
 		            if (models){
