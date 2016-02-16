@@ -305,6 +305,17 @@ span.form-w50.last > input {
 }
 }
 @media screen and (max-width: 767px) {
+	
+.banner.banner-page {
+	  height: 108px;
+}
+
+
+/*.long-tab{
+	display:inline !important;
+	margin-top:10px !important;
+}*/
+
 #header {
   padding:  15px 0;
   padding-right: 10px;
@@ -348,6 +359,14 @@ span.form-w50.last > input {
   height: 270px;
   padding-left: 30px;
   background-size: auto 100%;
+}
+
+.inner-banner {
+  vertical-align: text-top !important;
+}
+
+.home-banner {
+  vertical-align: middle !important;
 }
 .inner-banner h2 {
   font-size: 24px;
@@ -471,7 +490,7 @@ span.form-w50.last > input {
 }
 @media screen and (max-width: 540px) {
 	.banner {
-  background:#f0e4d6 url("/greenohm/assets/img/bg-respon.jpg") no-repeat;
+  background:#f0e4d6 url("../img/bg-respon.jpg") no-repeat;
   background-size: 100% 100px;
   background-position: left bottom;
   padding-left: 0;
@@ -577,6 +596,10 @@ span.form-w50.last > input {
 	width: 100%;
 	overflow-x: hidden;
 }	
+}
+
+.search-banner{
+	display:none;
 }
 
 
