@@ -575,6 +575,7 @@ span.form-w50.last > input {
 [class='container ng-scope']{
 	padding: 0 4% 10%;
 	width: 100%;
+	overflow-x: hidden;
 }	
 }
 
