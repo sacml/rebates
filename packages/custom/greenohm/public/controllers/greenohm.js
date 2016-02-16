@@ -48,6 +48,7 @@ angular.module('mean.greenohm').controller('GreenohmController', ['$scope', '$fi
     $scope.categories =[];
     $scope.productTypes =[];
     $scope.brands = [];
+    $scope.cats = [];
     $scope.types = [];
     $scope.compareItems ={};
     
@@ -119,13 +120,22 @@ angular.module('mean.greenohm').controller('GreenohmController', ['$scope', '$fi
 
         
         if (category=== 'search'){
-          var searchTerm = $location.search()['term'];
+           var searchTerm = $location.search()['term'];
 
           $scope.sectionName = "Search: " + searchTerm;   
           $scope.categories = cats;
-		   $(".search-banner").show();
-          
-          Greenohm.query({term: searchTerm},function (results){
+          $scope.cats =  $scope.categories.filter(function(obj){return obj.selected;})
+                 $(".search-banner").show();
+          var args = {term: searchTerm};
+          if ($scope.cats){
+             var selectedCats = [];
+            $scope.cats.forEach(function(element){
+                selectedCats.push(element.searchValue);
+            });
+             args.category = selectedCats.join(); 
+          }
+
+          Greenohm.query(args,function (results){
             results.forEach(function(i) {
               i.selected = false;
           });                  
@@ -169,7 +179,11 @@ angular.module('mean.greenohm').controller('GreenohmController', ['$scope', '$fi
         }
     
     };
-
+  
+    $scope.toggleCategory = function (category) {
+        category.selected = !category.selected;
+        $scope.find();
+    };
     $scope.toggleBrand = function (brand) {
         brand.selected = !brand.selected;
         $scope.find();
