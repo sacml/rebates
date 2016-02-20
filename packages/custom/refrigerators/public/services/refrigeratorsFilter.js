@@ -67,7 +67,7 @@ var RefrieratorTypes = [
 angular.module('mean.refrigerators').factory('RefrigeratorsFilter', [
 	function($resource) {
 	    return {
-	    	displayName: 'Refrierators',
+	    	displayName: 'Refrigerators',
 	    	brands: RefrieratorBrands,
 	    	productTypes: RefrieratorTypes
 	    }
