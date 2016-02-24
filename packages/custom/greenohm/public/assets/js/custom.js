@@ -9,11 +9,6 @@ $(document).ready(function(){
 		event.stopPropagation();
 	});
 	
-	$("a").click(function(event) {
-    $(this).parents('.main-menu').find('ul').slideUp();
-  });
-  
-	
 });
 $(document).load(function(){
 	
@@ -24,6 +19,9 @@ $(document).resize(function(){
 });
   
  $(document).click(function(){
+ 	console.log($(document).width());
+ 	if($(document).width() < 760){
      $('.main-menu').find('ul').slideUp();
+ }
 });
   
