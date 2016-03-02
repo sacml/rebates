@@ -18,6 +18,7 @@ $(document).resize(function(){
 	$('#content').css('margin-top',h_header);
 });
   
+  // ensure menu doesn't  slide up on desktop
  $(document).click(function(){
  	console.log($(document).width());
  	if($(document).width() < 760){
