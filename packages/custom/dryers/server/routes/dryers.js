@@ -10,8 +10,7 @@ module.exports = function(Dryers, app, auth, database) {
 
      app.route('/api/dryers/:dryerModel')
     .get(dryers.show);
-  
-   // Finish with setting up the brandmodle param
+ 
     app.param('dryerModel', dryers.dryer); 
 
 };
