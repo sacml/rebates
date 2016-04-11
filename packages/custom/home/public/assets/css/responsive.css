@@ -275,7 +275,7 @@ span.form-w50.last > input {
 }
 .list-find ul li {
   margin-right: 3%;
-  width: 31.33%;
+  width: 20.00%;
 }
 .wrapper-icon {
   height: 80px;
@@ -335,7 +335,7 @@ span.form-w50.last > input {
 @media screen and (max-width: 400px) {
 .list-find ul li {
   margin-right: 0%;
-  width: 33.33%;
+  width: 20.00%;
 }
 .list-find ul li a {
   font-size: 14px;
