@@ -37,7 +37,7 @@ module.exports = function(Products) {
 		            if (models){
 		                query.where('model').in(models);
 		            }		            
-		            query.select('_id category brand model width height price color image capacity');           
+		            query.select('_id category brand model width height price color image capacity rebate');           
 		            query.sort('-created').exec(function(err, products) {
 		                if (err) {
 		                    return res.status(500).json({

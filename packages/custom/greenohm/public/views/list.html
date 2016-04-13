@@ -87,6 +87,7 @@
             <div class="capacity left" ><a class="pointer" ng-click="order('capacity')"> Capacity</a></div>
             <div class="color left" ><a class="pointer" ng-click="order('color')">  Color</a></div>
             <div class="price-product left" ><a class="pointer" ng-click="order('price')">  MSRP ($$$)</a></div>
+            <div class="rebate left" ><a class="pointer" ng-click="order('rebate')"> Rebate</a></div>
             <div class="clear"></div>
           </div>
           
@@ -109,6 +110,8 @@
               <div class="capacity left"> <h2 class="show-respon">capacity</h2>{{product.capacity}}</div>
               <div class="color left"><h2 class="show-respon">color</h2><span data-ng-repeat="c in product.color">{{c}}<br/></span> </div>
               <div class="price-product left">  <h2 class="show-respon">price</h2>${{product.price}}</div>
+              <div class="price-product left">  <h2 class="show-respon">rebate</h2>${{product.rebate}}</div>
+              <div class="clear"></div>
             </li>            
           </ul>
 

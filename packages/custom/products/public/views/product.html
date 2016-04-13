@@ -39,7 +39,7 @@
       </div>
     </div>
     <div class="form-group" ng-class="{ 'has-error' : submitted && productForm.image.$invalid }">
-      <label mean-token="'edit-image'" for="image" class="col-md-2 control-label">Image</label>
+      <label mean-token="'edit-image'" for="image" class="col-md-2 control-label">Main Image</label>
       <div class="col-md-10">
         <input name="image" type="text" class="form-control" data-ng-model="product.image" id="image" placeholder="Image" required>
         <div ng-show="submitted && productForm.image.$invalid" class="help-block">
@@ -47,6 +47,45 @@
         </div>
       </div>
     </div>
+
+    <div class="form-group" ng-class="{ 'has-error' : submitted && productForm.image1.$invalid }">
+      <label mean-token="'edit-image'" for="image" class="col-md-2 control-label">Image</label>
+      <div class="col-md-10">
+        <input name="image1" type="text" class="form-control" data-ng-model="product.image1" id="image1" placeholder="Image1" >
+        <div ng-show="submitted && productForm.image1.$invalid" class="help-block">
+          <p ng-show="productForm.image.$error.required">Image  1 is required</p>
+        </div>
+      </div>
+    </div>
+   
+    <div class="form-group" ng-class="{ 'has-error' : submitted && productForm.image2.$invalid }">
+      <label mean-token="'edit-image2'" for="image" class="col-md-2 control-label">Image</label>
+      <div class="col-md-10">
+        <input name="image2" type="text" class="form-control" data-ng-model="product.image2" id="image2" placeholder="Image2" >
+        <div ng-show="submitted && productForm.image2.$invalid" class="help-block">
+          <p ng-show="productForm.image.$error.required">Image 2 is required</p>
+        </div>
+      </div>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : submitted && productForm.image3.$invalid }">
+      <label mean-token="'edit-image3'" for="image" class="col-md-2 control-label">Image</label>
+      <div class="col-md-10">
+        <input name="image3" type="text" class="form-control" data-ng-model="product.image3" id="image3" placeholder="Image3" >
+        <div ng-show="submitted && productForm.image3.$invalid" class="help-block">
+          <p ng-show="productForm.image.$error.required">Image  3 is required</p>
+        </div>
+      </div>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : submitted && productForm.image4.$invalid }">
+      <label mean-token="'edit-image4'" for="image" class="col-md-2 control-label">Image</label>
+      <div class="col-md-10">
+        <input name="image4" type="text" class="form-control" data-ng-model="product.image4" id="image4" placeholder="Image4" >
+        <div ng-show="submitted && productForm.image4.$invalid" class="help-block">
+          <p ng-show="productForm.image.$error.required">Image  4 is required</p>
+        </div>
+      </div>
+    </div>
+
 
     <div class="form-group" ng-class="{ 'has-error' : submitted && productForm.description.$invalid }">
       <label mean-token="'edit-description'" for="description" class="col-md-2 control-label">Description</label>
